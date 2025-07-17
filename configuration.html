@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration - Dependable Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-bg" data-theme="light" data-nav="topbar">
+    <div id="main-layout">
+        <!-- Topbar Navigation -->
+        <header class="top-nav" id="topbar-nav">
+            <div class="nav-left">
+                <img src="logo.png" alt="Dependable Solutions Logo" class="nav-logo">
+                <span class="nav-brand">Dependable<br>Solutions.</span>
+            </div>
+            <nav class="nav-links">
+                <a href="welcome.html">Home</a>
+                <a href="#" class="active">Configuration</a>
+                <a href="#">Data List</a>
+            </nav>
+            <div class="nav-avatar">
+                <img src="avatar.png" alt="User Avatar">
+            </div>
+        </header>
+        <!-- Sidebar Navigation -->
+        <aside class="side-nav" id="sidebar-nav">
+            <div class="side-nav-header">
+                <img src="logo.png" alt="Dependable Solutions Logo" class="nav-logo">
+                <span class="nav-brand">Dependable<br>Solutions.</span>
+            </div>
+            <nav class="side-nav-links">
+                <a href="welcome.html"><span class="side-icon">🏠</span> Home</a>
+                <a href="#" class="active"><span class="side-icon">⚙️</span> Configuration</a>
+                <a href="#"><span class="side-icon">📋</span> Data List</a>
+            </nav>
+            <div class="side-nav-footer">
+                <img src="avatar.png" alt="User Avatar" class="side-avatar">
+                <span class="side-username">Hasan Siddique</span>
+            </div>
+        </aside>
+        <main class="config-main">
+            <nav class="breadcrumb">
+                <span class="breadcrumb-home">&#8962;</span>
+                <span class="breadcrumb-sep">&gt;</span>
+                <span>Configuration</span>
+            </nav>
+            <section class="config-section">
+                <h2>Theme</h2>
+                <p class="config-desc">Choose a theme that best suits your visual preferences</p>
+                <div class="theme-options">
+                    <div class="theme-option" data-theme="light" tabindex="0">
+                        <div class="theme-preview light-preview"></div>
+                        <div class="theme-label"><span class="theme-icon">&#9788;</span> Light</div>
+                    </div>
+                    <div class="theme-option" data-theme="dark" tabindex="0">
+                        <div class="theme-preview dark-preview"></div>
+                        <div class="theme-label"><span class="theme-icon">&#9789;</span> Dark</div>
+                    </div>
+                    <div class="theme-option" data-theme="colored" tabindex="0">
+                        <div class="theme-preview colored-preview"></div>
+                        <div class="theme-label"><span class="theme-icon">&#128396;</span> Colored</div>
+                    </div>
+                </div>
+            </section>
+            <section class="config-section">
+                <h2>Navigation bar</h2>
+                <p class="config-desc">Select your preferred navigation layout for the application</p>
+                <div class="nav-options">
+                    <div class="nav-option" data-nav="topbar" tabindex="0">
+                        <div class="nav-preview topbar-preview"></div>
+                        <div class="nav-label"><span class="nav-icon">&#128451;</span> Topbar</div>
+                    </div>
+                    <div class="nav-option" data-nav="sidebar" tabindex="0">
+                        <div class="nav-preview sidebar-preview"></div>
+                        <div class="nav-label"><span class="nav-icon">&#128452;</span> Sidebar</div>
+                    </div>
+                </div>
+            </section>
+            <div class="config-actions">
+                <button class="discard-btn">Discard</button>
+                <button class="apply-btn">Apply Changes</button>
+            </div>
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
