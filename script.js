@@ -37,6 +37,14 @@ $(document).ready(function() {
     }).on('blur', function() {
         $(this).closest('.input-group').removeClass('focused');
     });
+
+    // Dashboard card hover/focus effect for accessibility
+    $('.dashboard-card').on('mouseenter focusin', function() {
+        $(this).addClass('hovered').siblings('.dashboard-card').removeClass('hovered');
+    });
+    $('.dashboard-card').on('mouseleave focusout', function() {
+        $(this).removeClass('hovered');
+    });
 });
 
 // Extra style for error

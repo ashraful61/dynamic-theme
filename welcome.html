@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Dependable Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-bg">
+    <header class="top-nav">
+        <div class="nav-left">
+            <img src="logo.png" alt="Dependable Solutions Logo" class="nav-logo">
+            <span class="nav-brand">Dependable<br>Solutions.</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Configuration</a>
+            <a href="#">Data List</a>
+        </nav>
+        <div class="nav-avatar">
+            <img src="avatar.png" alt="User Avatar">
+        </div>
+    </header>
+    <main class="dashboard-main">
+        <h1 class="dashboard-greeting">Good morning, Hasan Siddique!</h1>
+        <p class="dashboard-subtext">Select a page to get started</p>
+        <div class="dashboard-cards">
+            <div class="dashboard-card" id="config-card">
+                <div class="card-icon card-icon-config">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="12" fill="#FDE9D9"/><path d="M12 15.5A3.5 3.5 0 1 0 12 8.5a3.5 3.5 0 0 0 0 7Zm7-3.5c0-.46-.04-.91-.1-1.35l1.54-1.2a.5.5 0 0 0 .12-.65l-1.46-2.53a.5.5 0 0 0-.6-.23l-1.81.73a7.03 7.03 0 0 0-1.17-.68l-.27-1.92A.5.5 0 0 0 14.5 3h-2.99a.5.5 0 0 0-.5.42l-.27 1.92c-.41.18-.8.4-1.17.68l-1.81-.73a.5.5 0 0 0-.6.23L3.7 8.05a.5.5 0 0 0 .12.65l1.54 1.2c-.06.44-.1.89-.1 1.35 0 .46.04.91.1 1.35l-1.54 1.2a.5.5 0 0 0-.12.65l1.46 2.53a.5.5 0 0 0 .6.23l1.81-.73c.37.28.76.5 1.17.68l.27 1.92c.05.28.28.48.5.48h2.99c.22 0 .45-.2.5-.48l.27-1.92c.41-.18.8-.4 1.17-.68l1.81.73a.5.5 0 0 0 .6-.23l1.46-2.53a.5.5 0 0 0-.12-.65l-1.54-1.2Z" fill="#F59E42"/></svg>
+                </div>
+                <div class="card-content">
+                    <h2>Configuration</h2>
+                    <p>Customize the application's appearance and navigation style to suit your preferences.</p>
+                </div>
+                <div class="card-hover-action">
+                    <button class="card-action-btn">Go to Configuration <span class="card-action-icon">&#8599;</span></button>
+                </div>
+            </div>
+            <div class="dashboard-card" id="data-card">
+                <div class="card-icon card-icon-data">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="12" fill="#E3F0FF"/><path d="M7 8.5A1.5 1.5 0 0 1 8.5 7h7A1.5 1.5 0 0 1 17 8.5v7A1.5 1.5 0 0 1 15.5 17h-7A1.5 1.5 0 0 1 7 15.5v-7Zm1.5-.5a.5.5 0 0 0-.5.5v1h9v-1a.5.5 0 0 0-.5-.5h-7Zm8 2h-9v5.5c0 .28.22.5.5.5h7a.5.5 0 0 0 .5-.5V10Z" fill="#3B82F6"/></svg>
+                </div>
+                <div class="card-content">
+                    <h2>Data List</h2>
+                    <p>View and manage your data in a responsive table format with various actions available.</p>
+                </div>
+                <div class="card-hover-action">
+                    <button class="card-action-btn">Go to Data List <span class="card-action-icon">&#8599;</span></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
