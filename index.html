@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Dependable Solutions</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="background"></div>
-    <div class="login-container">
-        <div class="login-logo">
-            <img src="logo.png" alt="Dependable Solutions Logo">
-            <span>Dependable<br>Solutions.</span>
-        </div>
-        <form id="loginForm" class="login-form" autocomplete="off">
-            <h2>Welcome back!</h2>
-            <p class="signup-text">New to Dependable Solutions? <a href="#" id="signup-link">Sign up</a></p>
-            <div class="input-group">
-                <input type="email" id="email" name="email" placeholder="Email address" required>
-            </div>
-            <div class="input-group">
-                <input type="password" id="password" name="password" placeholder="Password" required>
-                <span class="toggle-password" tabindex="0">&#128065;</span>
-            </div>
-            <button type="submit" class="login-btn">Log in</button>
-            <a href="#" class="forgot-password">Forgot password?</a>
-        </form>
-    </div>
+    <link rel="stylesheet" href="css/login.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/login.js"></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <section class="login-header">
+            <div class="login-logo">
+                <img src="img/Logo.png" width="38" height="38" alt="Dependable Solutions Logo">
+                <span class="logo-text">
+                    Dependable<br>
+                    Solutions<span class="reg">&reg;</span>
+                </span>
+            </div>
+            <div>
+                <img src="img/login/X.png" alt="">
+            </div>
+        </section>
+        <div class="login-container">
+            <form id="loginForm" class="login-form" autocomplete="off">
+                <h2>Welcome back!</h2>
+                <p class="signup-text">New to Dependable Solutions? <a href="#" id="signup-link">Sign up</a></p>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="Email address" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <span class="toggle-password" tabindex="0">
+                        <img width="16" src="img/login/EyeSlash.png" alt="Show/Hide Password" class="eye-icon" />
+                    </span>
+                </div>
+                <button type="submit" class="login-btn">Log in</button>
+                <a href="#" class="forgot-password">Forgot password?</a>
+            </form>
+        </div>
+        <footer class="footer">
+            &copy; 2024 Dependable Solutions. All rights reserved.
+        </footer>
+    </div>
 </body>
-</html> 
+
+</html>
