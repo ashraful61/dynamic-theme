@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data List Item - Dependable Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background: #f6f8fc; }
+        .form-container {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 32px 40px 24px 40px;
+            margin: 32px auto;
+            max-width: 1100px;
+        }
+        .form-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+        .form-row {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 18px;
+        }
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .form-group label {
+            font-size: 15px;
+            color: #334155;
+            font-weight: 500;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 10px 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 7px;
+            font-size: 15px;
+            background: #f8fafc;
+            outline: none;
+            transition: border 0.2s;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #2563eb;
+        }
+        .form-group textarea {
+            min-height: 60px;
+            resize: vertical;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill-tag {
+            background: #f1f5f9;
+            color: #334155;
+            border: none;
+            border-radius: 6px;
+            padding: 7px 14px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+        .skill-tag.selected {
+            background: #2563eb;
+            color: #fff;
+        }
+        .employment-type, .status-group {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+        .date-range {
+            display: flex;
+            gap: 10px;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 32px;
+            gap: 24px;
+        }
+        .cancel-btn {
+            background: none;
+            border: none;
+            color: #64748b;
+            font-size: 17px;
+            padding: 12px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            flex: 1;
+        }
+        .save-btn {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 0;
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            flex: 2;
+        }
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 24px 0 12px 0;
+            color: #64748b;
+            font-size: 16px;
+        }
+        .breadcrumb-home {
+            font-size: 20px;
+        }
+        .tab-nav {
+            display: flex;
+            gap: 24px;
+            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 24px;
+        }
+        .tab-link {
+            padding: 10px 0;
+            font-size: 15px;
+            color: #2563eb;
+            font-weight: 500;
+            border: none;
+            background: none;
+            cursor: pointer;
+            border-bottom: 2px solid #2563eb;
+        }
+        .tab-link.inactive {
+            color: #64748b;
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body class="dashboard-bg">
+    <header class="top-nav">
+        <div class="nav-left">
+            <img src="logo.png" alt="Dependable Solutions Logo" class="nav-logo">
+            <span class="nav-brand">Dependable<br>Solutions.</span>
+        </div>
+        <nav class="nav-links">
+            <a href="welcome.html">Home</a>
+            <a href="configuration.html">Configuration</a>
+            <a href="datalist.html" class="active">Data List</a>
+        </nav>
+        <div class="nav-avatar">
+            <img src="avatar.png" alt="User Avatar">
+        </div>
+    </header>
+    <main style="padding: 0 32px;">
+        <nav class="breadcrumb">
+            <span class="breadcrumb-home">&#8962;</span>
+            <span class="breadcrumb-sep">&gt;</span>
+            <a href="datalist.html" style="color:inherit;text-decoration:none;">Data List</a>
+            <span class="breadcrumb-sep">&gt;</span>
+            <span>New Item</span>
+        </nav>
+        <div class="form-container">
+            <div class="tab-nav">
+                <button class="tab-link" id="form-tab">Form Controls</button>
+                <button class="tab-link inactive" id="nested-tab">Nested Tables</button>
+            </div>
+            <form id="main-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="e.g. Don Norman">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="donnorman@gmail.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <select id="department">
+                            <option value="">Select a department</option>
+                            <option>Engineering</option>
+                            <option>Design</option>
+                            <option>Marketing</option>
+                            <option>Sales</option>
+                            <option>Support</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Employment Type</label>
+                        <div class="employment-type">
+                            <label><input type="radio" name="employmentType"> Full-time</label>
+                            <label><input type="radio" name="employmentType"> Part-time</label>
+                            <label><input type="radio" name="employmentType"> Contractual</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="joinedOn">Joined on</label>
+                        <input type="date" id="joinedOn">
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <div class="status-group">
+                            <label><input type="checkbox" name="status"> Active</label>
+                            <label><input type="checkbox" name="status"> Inactive</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group" style="flex:2;">
+                        <label for="about">About</label>
+                        <textarea id="about" placeholder="Write a short bio..."></textarea>
+                    </div>
+                    <div class="form-group" style="flex:1;">
+                        <label>Skills</label>
+                        <div class="skills-list">
+                            <button type="button" class="skill-tag">HTML +</button>
+                            <button type="button" class="skill-tag">CSS +</button>
+                            <button type="button" class="skill-tag">jQuery +</button>
+                            <button type="button" class="skill-tag">Java Script <span style='font-size:13px;'>&#10003;</span></button>
+                            <button type="button" class="skill-tag">PHP +</button>
+                            <button type="button" class="skill-tag">React +</button>
+                            <button type="button" class="skill-tag">Tailwind +</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Project Duration</label>
+                        <div class="date-range">
+                            <input type="date" placeholder="From">
+                            <input type="date" placeholder="To">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" onclick="window.location.href='datalist.html'">Cancel</button>
+                    <button type="submit" class="save-btn">Save Item</button>
+                </div>
+            </form>
+            <div id="nested-table-section" style="display:none;">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+                    <div></div>
+                    <button type="button" id="create-project-btn" style="background:#2563eb;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:16px;cursor:pointer;display:flex;align-items:center;gap:8px;">
+                        <span style="font-size:20px;">&#43;</span> Create Project
+                    </button>
+                </div>
+                <!-- Modal for New Project -->
+                <div id="project-modal-overlay" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(30,41,59,0.18);z-index:1000;justify-content:center;align-items:center;">
+                    <div id="project-modal" style="background:#fff;border-radius:14px;box-shadow:0 8px 32px rgba(0,0,0,0.13);padding:32px 36px 28px 36px;max-width:420px;width:100%;position:relative;">
+                        <button id="close-project-modal" style="position:absolute;top:18px;right:18px;background:none;border:none;font-size:22px;color:#64748b;cursor:pointer;">&times;</button>
+                        <div style="font-size:20px;font-weight:600;margin-bottom:22px;">New Project</div>
+                        <form id="project-form">
+                            <div style="margin-bottom:16px;">
+                                <label style="font-size:15px;font-weight:500;">Project Name</label><br>
+                                <input type="text" id="proj-name" placeholder="e.g. DRM UI/UX Design" style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid #e2e8f0;border-radius:7px;font-size:15px;background:#f8fafc;">
+                            </div>
+                            <div style="margin-bottom:16px;">
+                                <label style="font-size:15px;font-weight:500;">Role</label><br>
+                                <select id="proj-role" style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid #e2e8f0;border-radius:7px;font-size:15px;background:#f8fafc;">
+                                    <option value="">Select a role</option>
+                                    <option>UI/UX Designer</option>
+                                    <option>Front-end Developer</option>
+                                    <option>Backend Developer</option>
+                                    <option>UI Designer</option>
+                                    <option>Graphic Designer</option>
+                                </select>
+                            </div>
+                            <div style="margin-bottom:16px;">
+                                <label style="font-size:15px;font-weight:500;">Project Status</label><br>
+                                <label style="margin-right:18px;"><input type="radio" name="proj-status" value="Completed" checked> Completed</label>
+                                <label><input type="radio" name="proj-status" value="In Progress"> In progress</label>
+                            </div>
+                            <div style="margin-bottom:24px;">
+                                <label style="font-size:15px;font-weight:500;">Project Duration</label><br>
+                                <div style="display:flex;gap:10px;margin-top:6px;">
+                                    <input type="date" id="proj-start" style="flex:1;padding:10px 12px;border:1px solid #e2e8f0;border-radius:7px;font-size:15px;background:#f8fafc;" placeholder="Started on">
+                                    <input type="date" id="proj-end" style="flex:1;padding:10px 12px;border:1px solid #e2e8f0;border-radius:7px;font-size:15px;background:#f8fafc;" placeholder="Ended on">
+                                </div>
+                            </div>
+                            <div style="display:flex;gap:16px;">
+                                <button type="button" id="cancel-project-btn" style="background:none;border:none;color:#64748b;font-size:16px;padding:12px 0;border-radius:8px;cursor:pointer;flex:1;">Cancel</button>
+                                <button type="submit" style="background:#2563eb;color:#fff;border:none;border-radius:8px;padding:12px 0;font-size:16px;font-weight:500;cursor:pointer;flex:2;">Save Project</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- End Modal -->
+                <div style="overflow-x:auto;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.04);padding:0 0 8px 0;">
+                    <table style="width:100%;border-collapse:collapse;">
+                        <thead>
+                            <tr style="background:#f8fafc;color:#64748b;font-weight:600;">
+                                <th style="padding:16px 12px;text-align:left;">Project Name</th>
+                                <th style="padding:16px 12px;text-align:left;">Role</th>
+                                <th style="padding:16px 12px;text-align:left;">Started on</th>
+                                <th style="padding:16px 12px;text-align:left;">Ended on</th>
+                                <th style="padding:16px 12px;text-align:left;">Status</th>
+                                <th style="padding:16px 12px;text-align:left;"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="nested-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <script>
+                // Tab switching logic
+                document.getElementById('form-tab').onclick = function() {
+                    this.classList.remove('inactive');
+                    document.getElementById('nested-tab').classList.add('inactive');
+                    document.getElementById('main-form').style.display = '';
+                    document.getElementById('nested-table-section').style.display = 'none';
+                };
+                document.getElementById('nested-tab').onclick = function() {
+                    this.classList.remove('inactive');
+                    document.getElementById('form-tab').classList.add('inactive');
+                    document.getElementById('main-form').style.display = 'none';
+                    document.getElementById('nested-table-section').style.display = '';
+                };
+                // Sample data for nested table
+                const nestedTableData = [
+                    { name: 'DRM UI/UX Design', role: 'UI/UX Designer', start: '19 Aug 24', end: '01 Jan 25', status: 'Completed' },
+                    { name: 'Web Development', role: 'Front-end Developer', start: '19 Aug 24', end: 'N/A', status: 'In Progress' },
+                    { name: 'DRM Mobile App Development', role: 'Backend Developer', start: '19 Aug 24', end: '01 Jan 25', status: 'Completed' },
+                    { name: 'DSI Web Application', role: 'UI Designer', start: '19 Aug 24', end: 'N/A', status: 'In Progress' },
+                    { name: 'Mobile Game', role: 'Graphic Designer', start: '18 Aug 24', end: '01 Jan 25', status: 'Completed' }
+                ];
+                const statusMap = {
+                    'Completed': '<span style="color:#16a34a;font-weight:500;"><span style="display:inline-block;width:8px;height:8px;background:#16a34a;border-radius:50%;margin-right:6px;"></span>Completed</span>',
+                    'In Progress': '<span style="color:#2563eb;font-weight:500;"><span style="display:inline-block;width:8px;height:8px;background:#2563eb;border-radius:50%;margin-right:6px;"></span>In Progress</span>'
+                };
+                function renderNestedTable() {
+                    const tbody = document.getElementById('nested-table-body');
+                    tbody.innerHTML = '';
+                    nestedTableData.forEach((row, idx) => {
+                        const tr = document.createElement('tr');
+                        if (idx % 2 === 1) tr.style.background = '#f9fbfd';
+                        tr.innerHTML = `
+                            <td style='padding:16px 12px;'>${row.name}</td>
+                            <td style='padding:16px 12px;'>${row.role}</td>
+                            <td style='padding:16px 12px;'><span style='display:flex;align-items:center;gap:4px;'>&#128197; ${row.start}</span></td>
+                            <td style='padding:16px 12px;'><span style='display:flex;align-items:center;gap:4px;'>&#128197; ${row.end}</span></td>
+                            <td style='padding:16px 12px;'>${statusMap[row.status] || ''}</td>
+                            <td style='padding:16px 12px;'><span style='color:#64748b;cursor:pointer;font-size:18px;margin-right:10px;'>&#9998;</span><span style='color:#dc2626;cursor:pointer;font-size:18px;'>&#128465;</span></td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
+                }
+                renderNestedTable();
+
+                // Modal logic
+                const modalOverlay = document.getElementById('project-modal-overlay');
+                document.getElementById('create-project-btn').onclick = function() {
+                    modalOverlay.style.display = 'flex';
+                };
+                document.getElementById('close-project-modal').onclick = function() {
+                    modalOverlay.style.display = 'none';
+                };
+                document.getElementById('cancel-project-btn').onclick = function(e) {
+                    e.preventDefault();
+                    modalOverlay.style.display = 'none';
+                };
+                // Optional: prevent modal close on click inside
+                document.getElementById('project-modal').onclick = function(e) {
+                    e.stopPropagation();
+                };
+                modalOverlay.onclick = function() {
+                    modalOverlay.style.display = 'none';
+                };
+            </script>
+        </div>
+    </main>
+</body>
+</html> 
