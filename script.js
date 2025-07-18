@@ -105,8 +105,11 @@ $(document).ready(function() {
 // Wait for the DOM to be ready
 $(document).ready(function() {
     // When the config card or its button is clicked, go to configuration.html
-    $('#config-card, #config-card .card-action-btn').on('click', function() {
+    $('#config-card .card-action-btn').on('click', function() {
         window.location.href = 'configuration.html';
+    });
+    $('#data-card').on('click', function() {
+        window.location.href = 'datalist.html';
     });
 });
 
