@@ -102,5 +102,13 @@ $(document).ready(function() {
     applyThemeNav(currentTheme, currentNav);
 });
 
+// Wait for the DOM to be ready
+$(document).ready(function() {
+    // When the config card or its button is clicked, go to configuration.html
+    $('#config-card, #config-card .card-action-btn').on('click', function() {
+        window.location.href = 'configuration.html';
+    });
+});
+
 // Extra style for error
 $('<style>.input-error{border:2px solid #e53e3e !important;}</style>').appendTo('head'); 
