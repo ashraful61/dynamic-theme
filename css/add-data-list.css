@@ -62,25 +62,38 @@ body {
 .skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
 }
 
 .skill-tag {
     background: #f1f5f9;
     color: #334155;
     border: none;
-    border-radius: 6px;
-    padding: 7px 14px;
-    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 15px;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
     cursor: pointer;
+    transition: background 0.18s, color 0.18s;
 }
 
 .skill-tag.selected {
-    background: #2563eb;
+    background: #18191b;
     color: #fff;
+}
+
+.skill-tag .plus {
+    color: #64748b;
+    font-size: 16px;
+    margin-left: 4px;
+}
+
+.skill-tag .checkmark {
+    color: #fff;
+    font-size: 16px;
+    margin-left: 4px;
 }
 
 .employment-type,
