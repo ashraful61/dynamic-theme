@@ -76,7 +76,7 @@ body, html {
     color: #444;
 }
 .signup-text a {
-    color: #1a4fff;
+    color: #0248FF;
     text-decoration: underline;
     font-weight: 500;
 }
@@ -96,7 +96,7 @@ body, html {
     transition: border 0.2s, box-shadow 0.2s;
 }
 .input-group input:focus {
-    border: 2px solid #1a4fff;
+    border: 2px solid #0248FF;
     box-shadow: 0 0 0 2px #e0e7ff;
     background: #fff;
 }
@@ -113,7 +113,7 @@ body, html {
 .login-btn {
     width: 100%;
     padding: 0.9rem 0;
-    background: #1a4fff;
+    background: #0248FF;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -129,7 +129,7 @@ body, html {
 .forgot-password {
     display: block;
     text-align: center;
-    color: #1a4fff;
+    color: #0248FF;
     text-decoration: underline;
     font-size: 0.98rem;
     margin-top: 0.2rem;

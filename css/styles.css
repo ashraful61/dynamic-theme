@@ -1,18 +1,33 @@
-body,
-html {
+body {
     overflow-x: hidden;
     margin: 0;
-    padding: 0px 32px;
+    max-width: 1440px;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+main {
+    background: #ffffff;
+    padding: 24px 32px;
+}
+
+.top-nav {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 1px 0 0 #DEE2ED;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 86px;
+    position: relative;
+    z-index: 10;
 }
 
 .login-header {
     width: 100%;
-    /* padding: 1rem 3rem; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
-    position: static;
+    padding: 24px 32px;
 }
 
 .login-logo {
@@ -44,18 +59,6 @@ html {
 }
 
 
-.top-nav {
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 1px 0 0 #e5e7eb;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 70px;
-    position: relative;
-    z-index: 10;
-}
-
 .nav-left {
     display: flex;
     align-items: center;
@@ -81,9 +84,8 @@ html {
 }
 
 .nav-links a {
-    color: #222;
+    color: #0A090A;
     text-decoration: none;
-    font-size: 1.05rem;
     font-weight: 500;
     padding: 2px 0;
     transition: color 0.2s, border-bottom 0.2s;
@@ -92,8 +94,7 @@ html {
 
 .nav-links a.active,
 .nav-links a:hover {
-    color: #1a4fff;
-    /* border-bottom: 2px solid #1a4fff; */
+    color: #0248FF;
 }
 
 .nav-avatar-img {
@@ -112,7 +113,7 @@ html {
     top: 54px;
     min-width: 140px;
     background: #fff;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
     border-radius: 10px;
     z-index: 10;
     padding: 8px 0;

@@ -126,8 +126,8 @@ body[data-theme="light"] .side-nav {
 
 body[data-theme="light"] .nav-links a.active,
 body[data-theme="light"] .nav-links a:hover {
-    color: #1a4fff;
-    /* border-bottom: 2px solid #1a4fff; */
+    color: #0248FF;
+    /* border-bottom: 2px solid #0248FF; */
 }
 
 body[data-theme="light"] .side-nav {
@@ -188,7 +188,7 @@ body[data-theme="light"] .side-nav {
 .side-nav-links a.active,
 .side-nav-links a:hover {
     background: #eaf0fb;
-    color: #1a4fff;
+    color: #0248FF;
 }
 
 body[data-theme="dark"] .side-nav-links a.active,
@@ -330,7 +330,7 @@ body[data-nav="sidebar"] .config-main {
 
 .theme-option.selected,
 .nav-option.selected {
-    border: 2px solid #1a4fff;
+    border: 2px solid #0248FF;
     background: #eaf0fb;
     box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.10);
 }
@@ -343,7 +343,7 @@ body[data-theme="dark"] .nav-option {
 
 body[data-theme="dark"] .theme-option.selected,
 body[data-theme="dark"] .nav-option.selected {
-    border: 2px solid #1a4fff;
+    border: 2px solid #0248FF;
     background: #23272f;
 }
 
@@ -471,7 +471,7 @@ body[data-theme="colored"] .sidebar-preview::before {
 }
 
 .apply-btn {
-    background: #1a4fff;
+    background: #0248FF;
     color: #fff;
     border: none;
     border-radius: 8px;
