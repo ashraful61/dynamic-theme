@@ -166,10 +166,6 @@
     border-radius: 4px;
 }
 
-.pagination button.active {
-    /* background: #2563eb; */
-    /* color: #fff; */
-}
 
 .img-and-name {
     display: flex;
@@ -177,5 +173,23 @@
 }
 
 .search-button {
+    display: block;
     background-color: #2563eb;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.focus-search {
+    display: none;
+    cursor: pointer;
+    margin-left: 8px;
+    position: absolute;
+    right: 0;
 }
