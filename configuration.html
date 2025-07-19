@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configuration - Dependable Solutions</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body class="dashboard-bg" data-theme="light" data-nav="topbar">
     <div id="main-layout">
         <!-- Topbar Navigation -->
         <header class="top-nav" id="topbar-nav">
-            <div class="nav-left">
-                <img src="logo.png" alt="Dependable Solutions Logo" class="nav-logo">
-                <span class="nav-brand">Dependable<br>Solutions.</span>
-            </div>
-            <nav class="nav-links">
-                <a href="welcome.html">Home</a>
-                <a href="configuration.html" class="active">Configuration</a>
-                <a href="datalist.html">Data List</a>
-            </nav>
-            <div class="nav-avatar">
-                <img src="avatar.png" alt="User Avatar">
+            <div class="login-header">
+                <a href="dashboard.html">
+                    <div class="login-logo">
+                        <img src="img/Logo.png" width="38" height="38" alt="Dependable Solutions Logo">
+                        <span class="logo-text">
+                            Dependable<br>
+                            Solutions<span class="reg">&reg;</span>
+                        </span>
+                    </div>
+                </a>
+                <div class="navbar">
+                    <nav class="nav-links">
+                        <a href="dashboard.html">Home</a>
+                        <a href="configuration.html" class="active">Configuration</a>
+                        <a href="datalist.html">Data List</a>
+                    </nav>
+                    <div class="nav-avatar">
+                        <img src="avatar.png" alt="User Avatar">
+                    </div>
+                </div>
             </div>
         </header>
         <!-- Sidebar Navigation -->
@@ -30,7 +41,7 @@
                 <span class="nav-brand">Dependable<br>Solutions.</span>
             </div>
             <nav class="side-nav-links">
-                <a href="welcome.html"><span class="side-icon">🏠</span> Home</a>
+                <a href="dashboard.html"><span class="side-icon">🏠</span> Home</a>
                 <a href="#" class="active"><span class="side-icon">⚙️</span> Configuration</a>
                 <a href="#"><span class="side-icon">📋</span> Data List</a>
             </nav>
@@ -86,4 +97,5 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </body>
-</html> 
+
+</html>

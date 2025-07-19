@@ -1,21 +1,4 @@
-$(document).ready(function() {
 
-
-    // Input focus effect (for accessibility)
-    $('.input-group input').on('focus', function() {
-        $(this).closest('.input-group').addClass('focused');
-    }).on('blur', function() {
-        $(this).closest('.input-group').removeClass('focused');
-    });
-
-    // Dashboard card hover/focus effect for accessibility
-    $('.dashboard-card').on('mouseenter focusin', function() {
-        $(this).addClass('hovered').siblings('.dashboard-card').removeClass('hovered');
-    });
-    $('.dashboard-card').on('mouseleave focusout', function() {
-        $(this).removeClass('hovered');
-    });
-});
 
 // Configuration page logic
 $(document).ready(function() {
@@ -72,16 +55,7 @@ $(document).ready(function() {
     applyThemeNav(currentTheme, currentNav);
 });
 
-// Wait for the DOM to be ready
-$(document).ready(function() {
-    // When the config card or its button is clicked, go to configuration.html
-    $('#config-card .card-action-btn').on('click', function() {
-        window.location.href = 'configuration.html';
-    });
-    $('#data-card').on('click', function() {
-        window.location.href = 'datalist.html';
-    });
-});
+
 
 // Extra style for error
 $('<style>.input-error{border:2px solid #e53e3e !important;}</style>').appendTo('head'); 

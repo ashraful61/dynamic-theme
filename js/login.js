@@ -36,7 +36,7 @@ $(document).ready(function() {
         if (!valid) return;
 
         // Simulate successful login
-        window.location.href = 'welcome.html';
+        window.location.href = 'dashboard.html';
     });
 
     // Input focus effect (for accessibility)

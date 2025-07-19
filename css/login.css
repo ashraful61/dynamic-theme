@@ -28,32 +28,7 @@ body, html {
     position: relative;
 }
 
-.login-header {
-    width: 100%;
-    padding: 1rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    position: static;
-}
 
-.login-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 1.5rem;
-}
-.login-logo img {
-    width: 48px;
-    height: 48px;
-}
-.login-logo span {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #222;
-    line-height: 1.1;
-}
 
 
 

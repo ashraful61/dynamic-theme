@@ -1,0 +1,133 @@
+.dashboard-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-greeting {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.3rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.dashboard-subtext {
+    color: #666;
+    font-size: 1.08rem;
+    margin-bottom: 2.2rem;
+    text-align: center;
+}
+
+.dashboard-cards {
+    display: flex;
+    gap: 2.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 900px;
+}
+
+.dashboard-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.08);
+    padding: 2.2rem 2rem 1.7rem 2rem;
+    min-width: 300px;
+    max-width: 418px;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    transition: box-shadow 0.2s, background 0.2s;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.card-icon {
+    margin-bottom: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-content h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem 0;
+    color: #222;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 1.02rem;
+    margin: 0;
+}
+
+.card-hover-action {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.card-action-btn {
+    background: #fff;
+    color: #222;
+    font-weight: 600;
+    font-size: 1.05rem;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.3rem;
+    box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.card-action-icon {
+    font-size: 1.1rem;
+}
+
+.dashboard-card:hover,
+.dashboard-card:focus-within {
+    background: #b3b3b3;
+}
+
+.dashboard-card:hover .card-hover-action,
+.dashboard-card:focus-within .card-hover-action {
+    display: block;
+}
+
+.dashboard-card:hover .card-content,
+.dashboard-card:focus-within .card-content {
+    opacity: 0.3;
+}
+
+.dashboard-card:hover .card-icon,
+.dashboard-card:focus-within .card-icon {
+    opacity: 0.3;
+}
+
+@media (max-width: 900px) {
+    .dashboard-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .dashboard-card {
+        max-width: 95vw;
+        min-width: 0;
+        width: 100%;
+    }
+} 
