@@ -1,0 +1,172 @@
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-input {
+    display: none;
+    width: 250px;
+    padding: 8px 32px 8px 12px;
+    border: none;
+    border-bottom: 2px solid #2563eb;
+    outline: none;
+    font-size: 16px;
+    background: #fff;
+    transition: width 0.3s;
+}
+
+.search-input.active {
+    display: block;
+}
+
+.search-icon {
+    position: absolute;
+    right: 8px;
+    cursor: pointer;
+    color: #2563eb;
+    font-size: 22px;
+}
+
+.add-item-btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.data-table th,
+.data-table td {
+    padding: 16px 12px;
+    text-align: left;
+}
+
+.data-table th {
+    background: #f8fafc;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.data-table tr {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.data-table tr:nth-child(even) {
+    background: #f9fbfd;
+}
+
+.data-table tr.selected {
+    background: #e8f0fe;
+}
+
+.status {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status.in-progress {
+    color: #2563eb;
+}
+
+.status-dot.in-progress {
+    background: #2563eb;
+}
+
+.status.completed {
+    color: #16a34a;
+}
+
+.status-dot.completed {
+    background: #16a34a;
+}
+
+.status.pending {
+    color: #ea580c;
+}
+
+.status-dot.pending {
+    background: #ea580c;
+}
+
+.status.rejected {
+    color: #dc2626;
+}
+
+.status-dot.rejected {
+    background: #dc2626;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.table-actions {
+    color: #64748b;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 24px 0 12px 0;
+    color: #64748b;
+    font-size: 16px;
+}
+
+.breadcrumb-home {
+    font-size: 20px;
+}
+
+.pagination {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+
+.pagination button {
+    background: none;
+    border: none;
+    color: #2563eb;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.pagination button.active {
+    background: #2563eb;
+    color: #fff;
+}

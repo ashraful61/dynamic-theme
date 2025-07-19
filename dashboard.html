@@ -9,63 +9,69 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/dashboard.js"></script>
-    <script src="script.js"></script>
 </head>
 
-<body class="dashboard-bg">
-    <div class="login-header">
-        <div class="login-logo">
-            <a href="dashboard.html">
-                <img src="img/Logo.png" width="38" height="38" alt="Dependable Solutions Logo">
-            </a>
-            <span class="logo-text">
-                Dependable<br>
-                Solutions<span class="reg">&reg;</span>
-            </span>
-        </div>
-        <div class="navbar">
-            <nav class="nav-links">
-                <a href="dashboard.html" class="active">Home</a>
-                <a href="configuration.html">Configuration</a>
-                <a href="datalist.html">Data List</a>
-            </nav>
-            <div class="nav-avatar">
-                <img src="img/dashboard/avatar.jpg" alt="User Avatar">
+<body class="dashboard-bg" data-theme="light" data-nav="topbar">
+    <div id="main-layout">
+        <!-- Topbar Navigation -->
+        <header class="top-nav" id="topbar-nav">
+            <div class="login-header">
+                <a href="dashboard.html">
+                    <div class="login-logo">
+                        <img src="img/Logo.png" width="38" height="38" alt="Dependable Solutions Logo">
+                        <span class="logo-text">
+                            Dependable<br>
+                            Solutions<span class="reg">&reg;</span>
+                        </span>
+                    </div>
+                </a>
+                <div class="navbar">
+                    <nav class="nav-links">
+                        <a href="dashboard.html" class="active">Home</a>
+                        <a href="configuration.html">Configuration</a>
+                        <a href="datalist.html">Data List</a>
+                    </nav>
+                    <div class="nav-avatar">
+                        <img src="img/dashboard/avatar.jpg" alt="User Avatar">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="dashboard-main">
+            <h1 class="dashboard-greeting">Good morning, Hasan Siddique!</h1>
+            <p class="dashboard-subtext">Select a page to get started</p>
+            <div class="dashboard-cards">
+                <div class="dashboard-card" id="config-card">
+                    <div class="card-icon card-icon-config">
+                        <img src="img/dashboard/setting.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h2>Configuration</h2>
+                        <p>Customize the application's appearance and navigation style to suit your preferences.</p>
+                    </div>
+                    <div class="card-hover-action">
+                        <button class="card-action-btn">
+                            Go to Configuration
+                            <img src="img/dashboard/arrow-icon.png" alt="Go to icon">
+                        </button>
+                    </div>
+                </div>
+                <div class="dashboard-card" id="data-card">
+                    <div class="card-icon card-icon-data">
+                        <img src="img/dashboard/data.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h2>Data List</h2>
+                        <p>View and manage your data in a responsive table format with various actions available.</p>
+                    </div>
+                    <div class="card-hover-action">
+                        <button class="card-action-btn">Go to Data List
+                            <img src="img/dashboard/arrow-icon.png" alt="Go to icon"></button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <main class="dashboard-main">
-        <h1 class="dashboard-greeting">Good morning, Hasan Siddique!</h1>
-        <p class="dashboard-subtext">Select a page to get started</p>
-        <div class="dashboard-cards">
-            <div class="dashboard-card" id="config-card">
-                <div class="card-icon card-icon-config">
-                    <img src="img/dashboard/setting.png" alt="">
-                </div>
-                <div class="card-content">
-                    <h2>Configuration</h2>
-                    <p>Customize the application's appearance and navigation style to suit your preferences.</p>
-                </div>
-                <div class="card-hover-action">
-                    <button class="card-action-btn">Go to Configuration <span
-                            class="card-action-icon">&#8599;</span></button>
-                </div>
-            </div>
-            <div class="dashboard-card" id="data-card">
-                <div class="card-icon card-icon-data">
-                    <img src="img/dashboard/data.png" alt="">
-                </div>
-                <div class="card-content">
-                    <h2>Data List</h2>
-                    <p>View and manage your data in a responsive table format with various actions available.</p>
-                </div>
-                <div class="card-hover-action">
-                    <button class="card-action-btn">Go to Data List <span
-                            class="card-action-icon">&#8599;</span></button>
-                </div>
-            </div>
-        </div>
-    </main>
 </body>
 
 </html>
