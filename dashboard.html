@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/dashboard.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/dashboard.js"></script>
 </head>
 
@@ -31,8 +32,23 @@
                         <a href="configuration.html">Configuration</a>
                         <a href="datalist.html">Data List</a>
                     </nav>
-                    <div class="nav-avatar">
-                        <img src="img/dashboard/avatar.jpg" alt="User Avatar">
+                    <div class="nav-avatar" id="profile-avatar">
+                        <img class="nav-avatar-img profile-menu-btn cursor" src="img/dashboard/avatar.jpg" alt="User Avatar" >
+
+                        <div class="profile-menu" id="profile-menu-open">
+                            <div class="popup-item">
+                                <img src="img/profile.png" alt=""> Profile
+                            </div>
+                            <div class="popup-item">
+                                <img src="img/settings.png" alt=""> Settings
+                            </div>
+                            <div class="popup-item">
+                                <img src="img/help.png" alt=""> Help
+                            </div>
+                            <div class="popup-item">
+                                <img src="img/exit.png" alt=""> Logout
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

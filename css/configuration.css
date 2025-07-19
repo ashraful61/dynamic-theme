@@ -51,7 +51,7 @@ body[data-theme="colored"] .nav-theme-logo {
         height: 32px;
     }
 
-    .nav-avatar img {
+    .nav-avatar-img {
         width: 28px;
         height: 28px;
     }
@@ -538,3 +538,4 @@ body[data-theme="colored"] .apply-btn:focus {
         height: 44px;
     }
 }
+

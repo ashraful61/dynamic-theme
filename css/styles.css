@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -18,7 +19,6 @@ body, html {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 1.5rem;
     cursor: pointer;
 }
 
@@ -39,6 +39,10 @@ body, html {
     gap: 16px;
 }
 
+.cursor {
+    cursor: pointer;
+}
+
 
 .top-nav {
     width: 100%;
@@ -47,7 +51,6 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2.2rem;
     height: 70px;
     position: relative;
     z-index: 10;
@@ -93,10 +96,48 @@ body, html {
     /* border-bottom: 2px solid #1a4fff; */
 }
 
-.nav-avatar img {
+.nav-avatar-img {
     width: 38px;
     height: 38px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #e5e7eb;
+}
+
+/* Profile popup menu styles */
+.profile-menu {
+    display: none;
+    position: absolute;
+    right: 53px;
+    top: 54px;
+    min-width: 140px;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    border-radius: 10px;
+    z-index: 10;
+    padding: 8px 0;
+    border: 1px solid #DEE2ED;
+}
+
+.popup-item {
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #222;
+    transition: background 0.18s, color 0.18s;
+}
+
+.popup-item span {
+    font-size: 18px;
+}
+
+.popup-item:last-child {
+    color: #dc2626;
+}
+
+.popup-item:hover {
+    background: #f6f8fc;
 }

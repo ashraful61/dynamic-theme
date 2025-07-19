@@ -51,4 +51,7 @@ $(document).ready(function() {
     });
     // On page load, always apply saved preferences
     applyThemeNav(currentTheme, currentNav);
+
+
+
 });

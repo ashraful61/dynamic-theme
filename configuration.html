@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/configuration.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/configuraion.js"></script>
 </head>
 
@@ -16,23 +17,38 @@
         <!-- Topbar Navigation -->
         <header class="top-nav" id="topbar-nav">
             <div class="login-header">
-                <div class="login-logo">
-                    <a href="dashboard.html">
+                <a href="dashboard.html">
+                    <div class="login-logo">
                         <img src="img/Logo.png" width="38" height="38" alt="Dependable Solutions Logo">
-                    </a>
-                    <span class="logo-text">
-                        Dependable<br>
-                        Solutions<span class="reg">&reg;</span>
-                    </span>
-                </div>
+                        <span class="logo-text">
+                            Dependable<br>
+                            Solutions<span class="reg">&reg;</span>
+                        </span>
+                    </div>
+                </a>
                 <div class="navbar">
                     <nav class="nav-links">
-                        <a href="dashboard.html" >Home</a>
+                        <a href="dashboard.html">Home</a>
                         <a href="configuration.html" class="active">Configuration</a>
                         <a href="datalist.html">Data List</a>
                     </nav>
-                    <div class="nav-avatar">
-                        <img src="img/dashboard/avatar.jpg" alt="User Avatar">
+                    <div class="nav-avatar" id="profile-avatar">
+                        <img class="nav-avatar-img profile-menu-btn cursor" src="img/dashboard/avatar.jpg" alt="User Avatar" >
+
+                        <div class="profile-menu" id="profile-menu-open">
+                            <div class="popup-item">
+                                <img src="img/profile.png" alt=""> Profile
+                            </div>
+                            <div class="popup-item">
+                                <img src="img/settings.png" alt=""> Settings
+                            </div>
+                            <div class="popup-item">
+                                <img src="img/help.png" alt=""> Help
+                            </div>
+                            <div class="popup-item">
+                                <img src="img/exit.png" alt=""> Logout
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -127,7 +143,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="nav-label"><span class="nav-icon">&#128452;</span> Sidebar</div>
+                        <div class="nav-label">
+                            <img src="img/configuration/side-bar-icon.svg" alt="">
+                            Sidebar
+                        </div>
                     </div>
                 </div>
             </section>
