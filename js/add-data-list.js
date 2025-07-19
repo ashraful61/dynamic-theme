@@ -10,7 +10,7 @@ $(document).ready(function () {
         this.classList.remove('inactive');
         document.getElementById('form-tab').classList.add('inactive');
         document.getElementById('main-form').style.display = 'none';
-        document.getElementById('nested-table-section').style.display = '';
+        document.getElementById('nested-table-section').style.display = 'block';
     };
     // Sample data for nested table
     const nestedTableData = [

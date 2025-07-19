@@ -11,10 +11,9 @@
     <script src="js/script.js"></script>
     <script src="js/add-data-list.js"></script>
 </head>
-</head>
 
 <body class="dashboard-bg">
-    <main >
+    <main>
         <header class="top-nav" id="topbar-nav">
             <div class="login-header">
                 <a href="dashboard.html">
@@ -81,7 +80,7 @@
                 <button class="tab-link inactive" id="nested-tab">Nested Tables</button>
             </div>
             <form id="main-form">
-                <div style="max-width: 880px;">
+                <div class="form-inner">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="fullName">Full Name</label>
@@ -127,31 +126,34 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group" style="flex:0.5">
+                        <div class="form-group form-group-about">
                             <label for="about">About</label>
                             <textarea id="about" placeholder="Write a short bio..."></textarea>
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group" style="flex:0.7">
+                        <div class="form-group form-group-skills">
                             <label>Skills</label>
                             <div class="skills-list">
                                 <button type="button" class="skill-tag">HTML <span class="plus">+</span></button>
-                                <button type="button" class="skill-tag">CSS <span class="checkmark">&#10003;</span></button>
+                                <button type="button" class="skill-tag">CSS <span class="plus">+</span></button>
                                 <button type="button" class="skill-tag">jQuery <span class="plus">+</span></button>
-                                <button type="button" class="skill-tag">Java Script <span class="checkmark">&#10003;</span></button>
+                                <button type="button" class="skill-tag">Java Script <span class="plus">+</span></button>
                                 <button type="button" class="skill-tag">PHP <span class="plus">+</span></button>
-                                <button type="button" class="skill-tag">React <span class="checkmark">&#10003;</span></button>
+                                <button type="button" class="skill-tag">React <span class="plus">+</span></button>
                                 <button type="button" class="skill-tag">Tailwind <span class="plus">+</span></button>
                             </div>
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
+                    <div class="project-duration">
+                        <div class="form-group-daterange">
                             <label>Project Duration</label>
                             <div class="date-range">
-                                <input type="date" placeholder="From">
-                                <input type="date" placeholder="To">
+                                <div class="date-container">
+                                    <input class="from-date" name="fromDate" type="date" placeholder="From" />
+                                    <input class="to-date" name="toDate" type="date" placeholder="To" />
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -162,32 +164,27 @@
                     <button type="submit" class="save-btn">Save Item</button>
                 </div>
             </form>
-            <div id="nested-table-section" style="display:none;">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+            <div id="nested-table-section">
+                <div class="nested-table-header">
                     <div></div>
-                    <button type="button" id="create-project-btn"
-                        style="background:#2563eb;color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:16px;cursor:pointer;display:flex;align-items:center;gap:8px;">
-                        <span style="font-size:20px;">&#43;</span> Create Project
+                    <button type="button" id="create-project-btn" class="create-project-btn">
+                        <span class="plus">&#43;</span> Create Project
                     </button>
                 </div>
                 <!-- Modal for New Project -->
-                <div id="project-modal-overlay"
-                    style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(30,41,59,0.18);z-index:1000;justify-content:center;align-items:center;">
-                    <div id="project-modal"
-                        style="background:#fff;border-radius:14px;box-shadow:0 8px 32px rgba(0,0,0,0.13);padding:32px 36px 28px 36px;max-width:420px;width:100%;position:relative;">
-                        <button id="close-project-modal"
-                            style="position:absolute;top:18px;right:18px;background:none;border:none;font-size:22px;color:#64748b;cursor:pointer;">&times;</button>
-                        <div style="font-size:20px;font-weight:600;margin-bottom:22px;">New Project</div>
+                <div id="project-modal-overlay" class="modal-overlay">
+                    <div id="project-modal" class="project-modal">
+                        <button id="close-project-modal" class="close-project-modal">&times;</button>
+                        <div class="modal-title">New Project</div>
                         <form id="project-form">
-                            <div style="margin-bottom:16px;">
-                                <label style="font-size:15px;font-weight:500;">Project Name</label><br>
+                            <div class="modal-form-group">
+                                <label>Project Name</label><br>
                                 <input type="text" id="proj-name" placeholder="e.g. DRM UI/UX Design"
-                                    style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid #e2e8f0;border-radius:7px;font-size:15px;background:#f8fafc;">
+                                    class="modal-input">
                             </div>
-                            <div style="margin-bottom:16px;">
-                                <label style="font-size:15px;font-weight:500;">Role</label><br>
-                                <select id="proj-role"
-                                    style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid #e2e8f0;border-radius:7px;font-size:15px;background:#f8fafc;">
+                            <div class="modal-form-group">
+                                <label>Role</label><br>
+                                <select id="proj-role" class="modal-input">
                                     <option value="">Select a role</option>
                                     <option>UI/UX Designer</option>
                                     <option>Front-end Developer</option>
@@ -196,45 +193,38 @@
                                     <option>Graphic Designer</option>
                                 </select>
                             </div>
-                            <div style="margin-bottom:16px;">
-                                <label style="font-size:15px;font-weight:500;">Project Status</label><br>
-                                <label style="margin-right:18px;"><input type="radio" name="proj-status"
-                                        value="Completed" checked> Completed</label>
-                                <label><input type="radio" name="proj-status" value="In Progress"> In progress</label>
+                            <div class="modal-form-group">
+                                <label>Project Status</label><br>
+                                <label class="modal-radio"><input type="radio" name="proj-status" value="Completed"
+                                        checked> Completed</label>
+                                <label class="modal-radio"><input type="radio" name="proj-status" value="In Progress">
+                                    In progress</label>
                             </div>
-                            <div style="margin-bottom:24px;">
-                                <label style="font-size:15px;font-weight:500;">Project Duration</label><br>
-                                <div style="display:flex;gap:10px;margin-top:6px;">
-                                    <input type="date" id="proj-start"
-                                        style="flex:1;padding:10px 12px;border:1px solid #e2e8f0;border-radius:7px;font-size:15px;background:#f8fafc;"
-                                        placeholder="Started on">
-                                    <input type="date" id="proj-end"
-                                        style="flex:1;padding:10px 12px;border:1px solid #e2e8f0;border-radius:7px;font-size:15px;background:#f8fafc;"
-                                        placeholder="Ended on">
+                            <div class="modal-form-group">
+                                <label>Project Duration</label><br>
+                                <div class="modal-date-range">
+                                    <input type="date" id="proj-start" class="modal-input" placeholder="Started on">
+                                    <input type="date" id="proj-end" class="modal-input" placeholder="Ended on">
                                 </div>
                             </div>
-                            <div style="display:flex;gap:16px;">
-                                <button type="button" id="cancel-project-btn"
-                                    style="background:none;border:none;color:#64748b;font-size:16px;padding:12px 0;border-radius:8px;cursor:pointer;flex:1;">Cancel</button>
-                                <button type="submit"
-                                    style="background:#2563eb;color:#fff;border:none;border-radius:8px;padding:12px 0;font-size:16px;font-weight:500;cursor:pointer;flex:2;">Save
-                                    Project</button>
+                            <div class="modal-actions">
+                                <button type="button" id="cancel-project-btn" class="cancel-project-btn">Cancel</button>
+                                <button type="submit" class="save-project-btn">Save Project</button>
                             </div>
                         </form>
                     </div>
                 </div>
                 <!-- End Modal -->
-                <div
-                    style="overflow-x:auto;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.04);padding:0 0 8px 0;">
-                    <table style="width:100%;border-collapse:collapse;">
+                <div class="nested-table-wrapper">
+                    <table class="nested-table">
                         <thead>
-                            <tr style="background:#f8fafc;color:#64748b;font-weight:600;">
-                                <th style="padding:16px 12px;text-align:left;">Project Name</th>
-                                <th style="padding:16px 12px;text-align:left;">Role</th>
-                                <th style="padding:16px 12px;text-align:left;">Started on</th>
-                                <th style="padding:16px 12px;text-align:left;">Ended on</th>
-                                <th style="padding:16px 12px;text-align:left;">Status</th>
-                                <th style="padding:16px 12px;text-align:left;"></th>
+                            <tr>
+                                <th>Project Name</th>
+                                <th>Role</th>
+                                <th>Started on</th>
+                                <th>Ended on</th>
+                                <th>Status</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody id="nested-table-body">
