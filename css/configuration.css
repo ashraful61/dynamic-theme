@@ -528,3 +528,26 @@ body[data-theme="colored"] .apply-btn:focus {
         padding: 0.7rem 0;
     }
 }
+
+.dark-home-menu,
+.colored-settings-menu,
+.dark-data-menu {
+    display: none;
+}
+
+
+/* For dark or colored theme, swap */
+body[data-theme="dark"] .home-menu, body[data-theme="dark"] .data-menu {
+    display: none;
+}
+
+body[data-theme="dark"] .dark-home-menu, body[data-theme="dark"] .dark-data-menu {
+    display: inline;
+}
+body[data-theme="colred"] .home-menu, body[data-theme="colored"] .data-menu, body[data-theme="colored"] .colored-settings-menu {
+    display: inline;
+}
+
+body[data-theme="colored"] .dark-home-menu, body[data-theme="colored"] .dark-data-menu, .body[data-theme="colored"] .settings-menu {
+    display: none;
+}
