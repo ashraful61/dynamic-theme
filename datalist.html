@@ -13,49 +13,49 @@
 </head>
 
 <body class="dashboard-bg" data-theme="light" data-nav="topbar">
-    <main>
-        <div id="main-layout">
-            <!-- Topbar Navigation -->
-            <header class="top-nav" id="topbar-nav">
-                <div class="login-header">
-                    <a href="dashboard.html">
-                        <div class="login-logo">
-                            <img src="img/Logo.png" width="38" height="38" alt="Dependable Solutions Logo">
-                            <span class="logo-text">
-                                Dependable<br>
-                                Solutions<span class="reg">&reg;</span>
-                            </span>
-                        </div>
-                    </a>
-                    <div class="navbar">
-                        <nav class="nav-links">
-                            <a href="dashboard.html">Home</a>
-                            <a href="configuration.html">Configuration</a>
-                            <a href="datalist.html" class="active">Data List</a>
-                        </nav>
-                        <div class="nav-avatar" id="profile-avatar">
-                            <img class="nav-avatar-img profile-menu-btn cursor" src="img/dashboard/avatar.jpg"
-                                alt="User Avatar">
 
-                            <div class="profile-menu" id="profile-menu-open">
-                                <div class="popup-item">
-                                    <img src="img/profile.png" alt=""> Profile
-                                </div>
-                                <div class="popup-item">
-                                    <img src="img/settings.png" alt=""> Settings
-                                </div>
-                                <div class="popup-item">
-                                    <img src="img/help.png" alt=""> Help
-                                </div>
-                                <div class="popup-item">
-                                    <img src="img/exit.png" alt=""> Logout
-                                </div>
+    <div id="main-layout">
+        <!-- Topbar Navigation -->
+        <header class="top-nav" id="topbar-nav">
+            <div class="login-header">
+                <a href="dashboard.html">
+                    <div class="login-logo">
+                        <img src="img/Logo.png" width="38" height="38" alt="Dependable Solutions Logo">
+                        <span class="logo-text">
+                            Dependable<br>
+                            Solutions<span class="reg">&reg;</span>
+                        </span>
+                    </div>
+                </a>
+                <div class="navbar">
+                    <nav class="nav-links">
+                        <a href="dashboard.html">Home</a>
+                        <a href="configuration.html">Configuration</a>
+                        <a href="datalist.html" class="active">Data List</a>
+                    </nav>
+                    <div class="nav-avatar" id="profile-avatar">
+                        <img class="nav-avatar-img profile-menu-btn cursor" src="img/dashboard/avatar.jpg"
+                            alt="User Avatar">
+
+                        <div class="profile-menu" id="profile-menu-open">
+                            <div class="popup-item">
+                                <img src="img/profile.png" alt=""> Profile
+                            </div>
+                            <div class="popup-item">
+                                <img src="img/settings.png" alt=""> Settings
+                            </div>
+                            <div class="popup-item">
+                                <img src="img/help.png" alt=""> Help
+                            </div>
+                            <div class="popup-item">
+                                <img src="img/exit.png" alt=""> Logout
                             </div>
                         </div>
                     </div>
                 </div>
-            </header>
-
+            </div>
+        </header>
+        <main>
             <nav class="breadcrumb">
                 <span class="breadcrumb-home">
                     <a href="dashboard.html">
@@ -65,9 +65,9 @@
                 <span class="breadcrumb-sep">
                     <img src="img/configuration/BreadcumbSeparator.png" alt="">
                 </span>
-                <span>Data List</span>
+                <span class="text-black">Data List</span>
             </nav>
-            <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 16px; gap: 16px;">
+            <div class="search-container">
                 <div class="search-input-wrapper">
                     <input type="text" class="search-input" placeholder="Search..." />
 
@@ -80,23 +80,24 @@
                     <span style="font-size:20px;">&#43;</span> Add Item
                 </button>
             </div>
+            <div class="table-container">
             <table class="data-table">
                 <thead>
-                    <tr>
-                        <th><input type="checkbox"></th>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Address</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                        <th></th>
+                    <tr class="header-row">
+                        <th class="sortable"><input type="checkbox">ID</th>
+                        <th class="sortable">Name</th>
+                        <th class="sortable">Email</th>
+                        <th class="sortable">Address</th>
+                        <th class="sortable">Date</th>
+                        <th class="">Status</th>
+                        <th ></th>
                     </tr>
                 </thead>
                 <tbody id="data-table-body">
                     <!-- Rows will be generated by JavaScript -->
                 </tbody>
             </table>
+            </div>
             <div class="pagination">
                 <button>&lt;</button>
                 <button class="active">1</button>
@@ -106,8 +107,8 @@
                 <button>5</button>
                 <button>&gt;</button>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
 
 </body>
 

@@ -42,14 +42,20 @@
     gap: 8px;
 }
 
+.table-container {
+    overflow-x: auto;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 0 0 8px 0;
+    border: 1px solid #DEE2ED;
+}
+
 .data-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 24px;
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .data-table th,
@@ -59,9 +65,9 @@
 }
 
 .data-table th {
-    background: #f8fafc;
+    background: #ffffff;
     font-weight: 600;
-    color: #64748b;
+    color: #818185;
 }
 
 .data-table tr {
@@ -181,4 +187,83 @@
     margin-left: 8px;
     position: absolute;
     right: 0;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+/* Responsive styles for table and layout */
+@media (max-width: 1100px) {
+  .table-container {
+    min-width: 0;
+    padding: 0 0 8px 0;
+  }
+  .data-table th, .data-table td {
+    padding: 12px 8px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .add-item-btn {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .data-table {
+    min-width: 900px;
+    width: 900px;
+  }
+  .search-input {
+    width: 100%;
+    min-width: 0;
+    font-size: 15px;
+  }
+  .search-input-wrapper {
+    width: 100%;
+  }
+  .pagination {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .search-button {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 500px) {
+  .data-table th, .data-table td {
+    padding: 8px 4px;
+    font-size: 13px;
+  }
+  .add-item-btn {
+    font-size: 15px;
+    padding: 8px 8px;
+  }
+  .search-input {
+    font-size: 13px;
+    padding: 8px 8px 8px 8px;
+  }
 }
