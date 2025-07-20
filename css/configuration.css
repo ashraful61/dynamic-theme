@@ -143,7 +143,6 @@ body[data-theme="light"] .side-nav {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 0 1.2rem;
 }
 
 .side-nav-links a {
@@ -167,13 +166,13 @@ body[data-theme="light"] .side-nav {
 
 body[data-theme="dark"] .side-nav-links a.active,
 body[data-theme="dark"] .side-nav-links a:hover {
-    background: #23272f;
-    color: #fff;
+    background: #E5EDFF;
+    color: #0248FF;
 }
 
 body[data-theme="colored"] .side-nav-links a.active,
 body[data-theme="colored"] .side-nav-links a:hover {
-    background: #ff6a3d;
+    background: #000000;
     color: #fff;
 }
 
