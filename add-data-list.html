@@ -70,7 +70,7 @@
             <span class="breadcrumb-sep">
                 <img src="img/configuration/BreadcumbSeparator.png" alt="">
             </span>
-            <span>New Item</span>
+            <span class="text-black">New Item</span>
         </nav>
 
         <div class="form-container">
@@ -178,7 +178,7 @@
                         </div>
                         <div class="modal-title">New Project</div>
                         <form id="project-form">
-                            <div class="modal-form-group">
+                            <div class="form-group">
                                 <label class="form-label">Project Name</label>
                                 <input type="text" id="proj-name" placeholder="e.g. DRM UI/UX Design"
                                     class="modal-input">
@@ -203,10 +203,12 @@
                             </div>
                             <div class="modal-form-group">
                                 <label>Project Duration</label><br>
-                                <div class="modal-date-range">
-                                    <input type="date" id="proj-start" class="modal-input" placeholder="Started on">
-                                    <input type="date" id="proj-end" class="modal-input" placeholder="Ended on">
-                                </div>
+
+                                    <div class="modal-date-range">
+                                        <input type="date" id="proj-start" class="modal-input-date" placeholder="Started on">
+                                        <input type="date" id="proj-end" class="modal-input-date" placeholder="Ended on">
+                                    </div>
+
                             </div>
                             <div class="modal-actions">
                                 <button type="button" id="cancel-project-btn" class="cancel-project-btn">Cancel</button>
@@ -244,13 +246,13 @@
                                         <img src='img/add-data-list/ArrowLineUpDown.png' />
                                     </div>
                                 </th>
-                                <th class="sortable" data-sort="status" tabindex="0" aria-sort="none">
+                                <th class="" data-sort="status" tabindex="0" aria-sort="none">
                                     <div class="table-header-item">
                                         <span class="heading-name">Status</span>
-                                        <img src='img/add-data-list/ArrowLineUpDown.png' />
+                                        <!-- <img src='img/add-data-list/ArrowLineUpDown.png' /> -->
                                     </div>
                                 </th>
-                                <th class="sortable">
+                                <th class="">
 
                                 </th>
                             </tr>

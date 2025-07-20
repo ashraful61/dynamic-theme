@@ -110,9 +110,12 @@ $(document).ready(function () {
         modalOverlay.style.display = 'none';
     };
 
-    document.getElementById('close-project-modal').onclick = function () {
-        modalOverlay.style.display = 'none';
-    };
+    var closeBtn = document.getElementById('close-project-modal');
+    if (closeBtn) {
+        closeBtn.onclick = function () {
+            modalOverlay.style.display = 'none';
+        };
+    }
     document.getElementById('cancel-project-btn').onclick = function (e) {
         e.preventDefault();
         modalOverlay.style.display = 'none';
