@@ -45,7 +45,6 @@ main {
 
 .login-logo span {
     font-weight: bold;
-    font-size: 1.1rem;
     color: #222;
     line-height: 1.1;
 }
@@ -180,6 +179,11 @@ main {
 
 .flex {
     display: flex;
+}
+
+.logo-text {
+    text-decoration: none;
+    position: relative;
 }
 
 .sortable {
