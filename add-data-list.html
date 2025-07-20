@@ -173,16 +173,18 @@
                 <!-- Modal for New Project -->
                 <div id="project-modal-overlay" class="modal-overlay">
                     <div id="project-modal" class="project-modal">
-                        <button id="close-project-modal" class="close-project-modal">&times;</button>
+                        <div class="cancel-icon-modal cursor">
+                            <img width="24" src="img/login/X.png" alt="">
+                        </div>
                         <div class="modal-title">New Project</div>
                         <form id="project-form">
                             <div class="modal-form-group">
-                                <label>Project Name</label><br>
+                                <label  class="form-label">Project Name</label>
                                 <input type="text" id="proj-name" placeholder="e.g. DRM UI/UX Design"
                                     class="modal-input">
                             </div>
                             <div class="modal-form-group">
-                                <label>Role</label><br>
+                                <label  class="form-label">Role</label>
                                 <select id="proj-role" class="modal-input">
                                     <option value="">Select a role</option>
                                     <option>UI/UX Designer</option>
@@ -193,7 +195,7 @@
                                 </select>
                             </div>
                             <div class="modal-form-group">
-                                <label>Project Status</label><br>
+                                <label class="form-label">Project Status</label>
                                 <label class="modal-radio"><input type="radio" name="proj-status" value="Completed"
                                         checked> Completed</label>
                                 <label class="modal-radio"><input type="radio" name="proj-status" value="In Progress">
@@ -231,7 +233,6 @@
                     </table>
                 </div>
             </div>
-
         </div>
     </main>
 </body>

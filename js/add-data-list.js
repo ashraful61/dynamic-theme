@@ -48,6 +48,12 @@ $(document).ready(function () {
     document.getElementById('create-project-btn').onclick = function () {
         modalOverlay.style.display = 'flex';
     };
+    
+    // Close modal when clicking the X icon
+    document.querySelector('.cancel-icon-modal').onclick = function () {
+        modalOverlay.style.display = 'none';
+    };
+    
     document.getElementById('close-project-modal').onclick = function () {
         modalOverlay.style.display = 'none';
     };
