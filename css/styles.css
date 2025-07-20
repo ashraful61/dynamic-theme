@@ -1,14 +1,13 @@
 body {
     overflow-x: hidden;
     margin: 0;
-    /* max-width: 1440px; */
     font-family: 'Inter', Arial, sans-serif;
     margin: 0 auto
 }
 
 main {
     background: #ffffff;
-    padding: 24px 32px;
+    padding: 32px;
 }
 
 .top-nav {
@@ -142,4 +141,34 @@ main {
 
 .popup-item:hover {
     background: #f6f8fc;
+}
+
+.bread-cumb-text {
+    color: #818185;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.breadcrumb-home {
+    font-size: 20px;
+}
+
+.breadcrumb-home img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.breadcrumb-sep img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -253,18 +253,6 @@ body[data-nav="sidebar"] .config-main {
     margin-left: 260px;
 }
 
-.breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.05rem;
-    color: #888;
-    margin-bottom: 2.2rem;
-}
-
-.breadcrumb-home {
-    font-size: 1.2rem;
-}
 
 .config-section {
     margin-bottom: 2.5rem;

@@ -24,6 +24,56 @@ $(document).ready(function () {
         'Completed': '<span style="color:#16a34a;font-weight:500;"><span style="display:inline-block;width:8px;height:8px;background:#16a34a;border-radius:50%;margin-right:6px;"></span>Completed</span>',
         'In Progress': '<span style="color:#2563eb;font-weight:500;"><span style="display:inline-block;width:8px;height:8px;background:#2563eb;border-radius:50%;margin-right:6px;"></span>In Progress</span>'
     };
+    // Sorting logic
+    let currentSort = { key: null, direction: 'ascending' };
+    function sortTableData(key) {
+        if (currentSort.key === key) {
+            currentSort.direction = currentSort.direction === 'ascending' ? 'descending' : 'ascending';
+        } else {
+            currentSort.key = key;
+            currentSort.direction = 'ascending';
+        }
+        nestedTableData.sort((a, b) => {
+            let valA = a[key] || '';
+            let valB = b[key] || '';
+            if (key === 'start' || key === 'end') {
+                // Try to parse as date, fallback to string
+                let dateA = Date.parse(valA);
+                let dateB = Date.parse(valB);
+                if (!isNaN(dateA) && !isNaN(dateB)) {
+                    valA = dateA;
+                    valB = dateB;
+                }
+            }
+            if (valA < valB) return currentSort.direction === 'ascending' ? -1 : 1;
+            if (valA > valB) return currentSort.direction === 'ascending' ? 1 : -1;
+            return 0;
+        });
+    }
+    function updateSortIcons() {
+        document.querySelectorAll('.sortable').forEach(th => {
+            th.setAttribute('aria-sort', 'none');
+        });
+        if (currentSort.key) {
+            const th = document.querySelector('.sortable[data-sort="' + currentSort.key + '"]');
+            if (th) th.setAttribute('aria-sort', currentSort.direction);
+        }
+    }
+    document.querySelectorAll('.sortable').forEach(th => {
+        th.addEventListener('click', function () {
+            const key = this.getAttribute('data-sort');
+            sortTableData(key);
+            renderNestedTable();
+            updateSortIcons();
+        });
+        th.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+    });
+    // Update renderNestedTable to call updateSortIcons after rendering
     function renderNestedTable() {
         const tbody = document.getElementById('nested-table-body');
         tbody.innerHTML = '';
@@ -33,13 +83,19 @@ $(document).ready(function () {
             tr.innerHTML = `
             <td style='padding:16px 12px;'>${row.name}</td>
             <td style='padding:16px 12px;'>${row.role}</td>
-            <td style='padding:16px 12px;'><span style='display:flex;align-items:center;gap:4px;'>&#128197; ${row.start}</span></td>
-            <td style='padding:16px 12px;'><span style='display:flex;align-items:center;gap:4px;'>&#128197; ${row.end}</span></td>
+            <td style='padding:16px 12px;'><span style='display:flex;align-items:center;gap:4px;'><img src='img/add-data-list/CalendarBlank.png' /> ${row.start}</span></td>
+            <td style='padding:16px 12px;'><span style='display:flex;align-items:center;gap:4px;'><img src='img/add-data-list/CalendarBlank.png' /> ${row.end}</span></td>
             <td style='padding:16px 12px;'>${statusMap[row.status] || ''}</td>
-            <td style='padding:16px 12px;'><span style='color:#64748b;cursor:pointer;font-size:18px;margin-right:10px;'>&#9998;</span><span style='color:#dc2626;cursor:pointer;font-size:18px;'>&#128465;</span></td>
+            <td style='padding:16px 12px;'>
+            <td style='padding:16px 12px;'>
+                <img src='img/add-data-list/rename.png' /> &nbsp;
+                <img src='img/add-data-list/delete.png' /> 
+            </td>
+            </td>
         `;
             tbody.appendChild(tr);
         });
+        updateSortIcons();
     }
     renderNestedTable();
 
@@ -48,12 +104,12 @@ $(document).ready(function () {
     document.getElementById('create-project-btn').onclick = function () {
         modalOverlay.style.display = 'flex';
     };
-    
+
     // Close modal when clicking the X icon
     document.querySelector('.cancel-icon-modal').onclick = function () {
         modalOverlay.style.display = 'none';
     };
-    
+
     document.getElementById('close-project-modal').onclick = function () {
         modalOverlay.style.display = 'none';
     };
@@ -70,7 +126,7 @@ $(document).ready(function () {
     };
 
     // Skills tag toggle logic
-    $(document).on('click', '.skill-tag', function() {
+    $(document).on('click', '.skill-tag', function () {
         var $btn = $(this);
         if ($btn.hasClass('selected')) {
             $btn.removeClass('selected');

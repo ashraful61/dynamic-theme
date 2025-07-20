@@ -63,7 +63,7 @@
                 <img src="img/configuration/BreadcumbSeparator.png" alt="">
             </span>
             <span class="breadcrumb-home">
-                <a href="datalist.html">
+                <a class="bread-cumb-text" href="datalist.html">
                     Data List
                 </a>
             </span>
@@ -167,7 +167,7 @@
                 <div class="nested-table-header">
                     <div></div>
                     <button type="button" id="create-project-btn" class="create-project-btn">
-                        <span class="plus">&#43;</span> Create Project
+                        + Create Project
                     </button>
                 </div>
                 <!-- Modal for New Project -->
@@ -179,12 +179,12 @@
                         <div class="modal-title">New Project</div>
                         <form id="project-form">
                             <div class="modal-form-group">
-                                <label  class="form-label">Project Name</label>
+                                <label class="form-label">Project Name</label>
                                 <input type="text" id="proj-name" placeholder="e.g. DRM UI/UX Design"
                                     class="modal-input">
                             </div>
                             <div class="modal-form-group">
-                                <label  class="form-label">Role</label>
+                                <label class="form-label">Role</label>
                                 <select id="proj-role" class="modal-input">
                                     <option value="">Select a role</option>
                                     <option>UI/UX Designer</option>
@@ -219,13 +219,40 @@
                 <div class="nested-table-wrapper">
                     <table class="nested-table">
                         <thead>
-                            <tr>
-                                <th>Project Name</th>
-                                <th>Role</th>
-                                <th>Started on</th>
-                                <th>Ended on</th>
-                                <th>Status</th>
-                                <th></th>
+                            <tr class="header-row">
+                                <th class="sortable" data-sort="name" tabindex="0" aria-sort="none">
+                                    <div class="table-header-item">
+                                        <span class="heading-name">Project Name</span>
+                                        <img src='img/add-data-list/ArrowLineUpDown.png' />
+                                    </div>
+                                </th>
+                                <th class="sortable" data-sort="role" tabindex="0" aria-sort="none">
+                                    <div class="table-header-item">
+                                        <span class="heading-name">Role</span>
+                                        <img src='img/add-data-list/ArrowLineUpDown.png' />
+                                    </div>
+                                </th>
+                                <th class="sortable" data-sort="start" tabindex="0" aria-sort="none">
+                                    <div class="table-header-item">
+                                        <span class="heading-name">Started on </span>
+                                        <img src='img/add-data-list/ArrowLineUpDown.png' />
+                                    </div>
+                                </th>
+                                <th class="sortable" data-sort="end" tabindex="0" aria-sort="none">
+                                    <div class="table-header-item">
+                                        <span class="heading-name">Ended on</span>
+                                        <img src='img/add-data-list/ArrowLineUpDown.png' />
+                                    </div>
+                                </th>
+                                <th class="sortable" data-sort="status" tabindex="0" aria-sort="none">
+                                    <div class="table-header-item">
+                                        <span class="heading-name">Status</span>
+                                        <img src='img/add-data-list/ArrowLineUpDown.png' />
+                                    </div>
+                                </th>
+                                <th class="sortable">
+
+                                </th>
                             </tr>
                         </thead>
                         <tbody id="nested-table-body">
