@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .main-container {
@@ -25,16 +25,15 @@
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
     border-radius: 16px;
     padding: 2.5rem 2rem 2rem 2rem;
-    width: 90vw;           /* Responsive width */
-    max-width: 603px;      /* Still limits on large screens */
-    min-width: 260px;      /* Prevents being too small */
+    width: 90vw;
+    max-width: 603px;
+    min-width: 260px;
     z-index: 2;
-    backdrop-filter: blur(12px);
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .footer {
@@ -52,45 +51,53 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0; /* Ensure no extra padding */
+    padding: 0;
+    /* Ensure no extra padding */
     margin: 0;
 }
+
 .login-form h2 {
     margin: 0 0 0.5rem 0;
     font-size: 1.6rem;
     font-weight: 600;
     color: #222;
 }
+
 .signup-text {
     font-size: 0.95rem;
     margin-bottom: 1.2rem;
     color: #444;
 }
+
 .signup-text a {
     color: #0248FF;
     text-decoration: underline;
     font-weight: 500;
 }
+
 .input-group {
     width: 100%;
     margin-bottom: 1.1rem;
     position: relative;
 }
+
 .input-group input {
     width: 100%;
     padding: 0.85rem 1rem;
     border: 1.5px solid #d1d5db;
     border-radius: 8px;
     font-size: 1rem;
-    background: rgba(255,255,255,0.95);
+    background: rgba(255, 255, 255, 0.95);
     outline: none;
     transition: border 0.2s, box-shadow 0.2s;
 }
+
 .input-group input:focus {
     border: 2px solid #0248FF;
     box-shadow: 0 0 0 2px #e0e7ff;
     background: #fff;
 }
+
 .toggle-password {
     position: absolute;
     right: 1rem;
@@ -101,6 +108,7 @@
     color: #888;
     user-select: none;
 }
+
 .login-btn {
     width: 100%;
     padding: 0.9rem 0;
@@ -114,9 +122,12 @@
     margin-bottom: 1rem;
     transition: background 0.2s;
 }
-.login-btn:hover, .login-btn:focus {
+
+.login-btn:hover,
+.login-btn:focus {
     background: #1741d1;
 }
+
 .forgot-password {
     display: block;
     text-align: center;
@@ -125,15 +136,25 @@
     font-size: 0.98rem;
     margin-top: 0.2rem;
 }
+
 .input-group input,
 .login-btn {
     width: 100%;
 }
+
+@media (max-width: 1200px) {
+    .login-container {
+        max-width: 480px;
+    }
+
+}
+
 @media (max-width: 600px) {
     .login-container {
         max-width: 98vw;
-        padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+        padding: 40px;
     }
+
     .login-logo img {
         width: 38px;
         height: 38px;
