@@ -194,9 +194,6 @@ main {
     background: #ffffff;
 }
 
-body[data-theme="colored"] .nav-links a {
-    color: #fff;
-}
 
 body[data-theme="dark"] .nav-links a {
     color: #fff;
@@ -209,6 +206,19 @@ body[data-theme="colored"] .nav-links a:hover {
 
 body[data-theme="dark"] .nav-links a.active,
 body[data-theme="dark"] .nav-links a:hover {
+    color: #0248FF;
+}
+
+body[data-theme="light"] .nav-links a.active,
+body[data-theme="light"] .nav-links a:hover {
+    color: #0248FF;
+}
+
+body[data-theme="colored"] .nav-links a.active {
+    color: #ffffff;
+}
+
+body[data-theme="colored"] .nav-links a:hover {
     color: #0248FF;
 }
 
@@ -284,8 +294,6 @@ body[data-theme="dark"] .logo-img-light,
 body[data-theme="colored"] .logo-img-light {
     display: none;
 }
-
-
 
 
 @media (max-width: 768px) {

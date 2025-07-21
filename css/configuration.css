@@ -81,11 +81,6 @@ body[data-theme="light"] .side-nav {
     color: #222;
 }
 
-body[data-theme="light"] .nav-links a.active,
-body[data-theme="light"] .nav-links a:hover {
-    color: #0248FF;
-}
-
 body[data-theme="light"] .side-nav {
     border-right: 1px solid #e5e7eb;
 }
@@ -226,13 +221,30 @@ body[data-nav="topbar"] .top-nav {
     transition: margin-left 0.2s;
 }
 
+.configuration-text {
+    color: #ffffff;
+}
+
 body[data-nav="sidebar"] .config-main {
     margin-left: 260px;
 }
 
+body[data-nav="topbar"] .config-main {
+    max-width: 100%;
+    width: 100%;
+}
+
+body[data-theme="dark"] .config-main,
+body[data-theme="colored"] .config-main {
+    background: #000000;
+}
+
+body[data-theme="light"] .configuration-text {
+    color: #000000;
+}
 
 .config-section {
-    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
 }
 
 .config-section h2 {
@@ -514,7 +526,7 @@ body[data-theme="colored"] .apply-btn:focus {
     .nav-avatar-img {
         width: 28px;
         height: 28px;
-    }    
+    }
 
 
     .dashboard-greeting {
