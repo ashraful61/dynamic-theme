@@ -62,9 +62,6 @@
     font-size: 12px;
 }
 
-
-
-/* Remove flex from .login-form and use block/centered styles */
 .login-form {
     width: 100%;
     display: flex;
