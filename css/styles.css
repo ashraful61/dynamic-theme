@@ -171,6 +171,9 @@ main {
     color: #0A090A;
 }
 
+.login-form {
+    width: 100%;
+}
 
 .flex {
     display: flex;

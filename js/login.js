@@ -45,4 +45,20 @@ $(document).ready(function() {
     }).on('blur', function() {
         $(this).closest('.input-group').removeClass('focused');
     });
+
+    $('#email').on('focus', function() {
+        $('.email-label').css('display', 'block');
+        $(this).attr('placeholder', '');
+    }).on('blur', function() {
+        $('.email-label').css('display', 'none');
+        $(this).attr('placeholder', 'Email address');
+    });
+    $('#password').on('focus', function() {
+        $('.password-label').css('display', 'block');
+        $(this).attr('placeholder', '');
+    }).on('blur', function() {
+        $('.password-label').css('display', 'none');
+        $(this).attr('placeholder', 'Password');
+    });
+
 });
