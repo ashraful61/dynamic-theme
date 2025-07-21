@@ -25,10 +25,9 @@
     background: white;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
     border-radius: 16px;
-    padding: 2.5rem 2rem 2rem 2rem;
+    padding: 3rem;
     width: 90vw;
-    max-width: 603px;
-    min-width: 260px;
+    width: 450px;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -37,14 +36,33 @@
     opacity: 0.8;
 }
 
-.footer {
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-    color: #888;
-    font-size: 0.95rem;
-    background: transparent;
+.welcome-text {
+    color: #0A090A;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0%;
+    font-size: 24px;
 }
+
+.signup-text {
+    color: #0A090A;
+    font-weight: 400;
+    line-height: 170%;
+    letter-spacing: 0%;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.signup-link {
+    color: #0248FF;
+    text-decoration: underline;
+    font-weight: 600;
+    line-height: 170%;
+    letter-spacing: 0%;
+    font-size: 12px;
+}
+
+
 
 /* Remove flex from .login-form and use block/centered styles */
 .login-form {
@@ -63,18 +81,6 @@
     color: #222;
 }
 
-.signup-text {
-    font-size: 0.95rem;
-    margin-bottom: 1.2rem;
-    color: #444;
-}
-
-.signup-text a {
-    color: #0248FF;
-    text-decoration: underline;
-    font-weight: 500;
-}
-
 .input-group {
     width: 100%;
     margin-bottom: 1.1rem;
@@ -83,19 +89,24 @@
 
 .input-group input {
     width: 100%;
-    padding: 0.85rem 1rem;
+    padding: 18px 16px 14px 16px;
+    height: 54px;
     border: 1.5px solid #d1d5db;
     border-radius: 8px;
     font-size: 1rem;
-    background: rgba(255, 255, 255, 0.95);
+    background: #ffffff;
     outline: none;
     transition: border 0.2s, box-shadow 0.2s;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0%;
 }
 
-.input-group input:focus {
+.input-group input:focus,
+.input-group input:hover {
     border: 1px solid #0248FF;
     box-shadow: 0 0 0 2px #e0e7ff;
-    background: #fff;
 }
 
 .toggle-password {
@@ -116,10 +127,10 @@
     color: #fff;
     border: none;
     border-radius: 8px;
-    font-size: 1.1rem;
+    font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     transition: background 0.2s;
 }
 
@@ -142,15 +153,24 @@
     width: 100%;
 }
 
+.footer {
+    color: #0A090A;
+    font-weight: 400;
+    line-height: 170%;
+    letter-spacing: 0%;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
 @media (max-width: 1200px) {
     .login-container {
         max-width: 480px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .login-container {
-        max-width: 98vw;
-        padding: 40px;
+        max-width: 85vw;
+        padding: 20px;
     }
 }
