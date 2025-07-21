@@ -514,11 +514,8 @@ body[data-theme="colored"] .apply-btn:focus {
     .nav-avatar-img {
         width: 28px;
         height: 28px;
-    }
+    }    
 
-    .dashboard-main {
-        padding: 1.2rem 0.2rem 0.5rem 0.2rem;
-    }
 
     .dashboard-greeting {
         font-size: 1.1rem;
