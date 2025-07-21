@@ -2,6 +2,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    font-family: 'Inter', Arial, sans-serif;
 }
 
 .main-container {
@@ -52,7 +53,6 @@
     flex-direction: column;
     align-items: center;
     padding: 0;
-    /* Ensure no extra padding */
     margin: 0;
 }
 
@@ -93,7 +93,7 @@
 }
 
 .input-group input:focus {
-    border: 2px solid #0248FF;
+    border: 1px solid #0248FF;
     box-shadow: 0 0 0 2px #e0e7ff;
     background: #fff;
 }
@@ -146,17 +146,11 @@
     .login-container {
         max-width: 480px;
     }
-
 }
 
 @media (max-width: 600px) {
     .login-container {
         max-width: 98vw;
         padding: 40px;
-    }
-
-    .login-logo img {
-        width: 38px;
-        height: 38px;
     }
 }
