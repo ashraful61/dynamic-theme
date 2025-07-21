@@ -22,18 +22,11 @@ $(document).ready(function () {
     });
 
     // Hamburger menu logic for mobile
-    $(document).on('click', '.hamburger-menu', function(e) {
-        e.stopPropagation();
-        $('body').toggleClass('menu-open');
-    });
-    // Hide menu when clicking outside (on mobile)
-    $(document).on('click', function(e) {
-        if ($('body').hasClass('menu-open')) {
-            if (!$(e.target).closest('.navbar, .hamburger-menu').length) {
-                $('body').removeClass('menu-open');
-            }
-        }
-    });
+    $(document).on('click', '.hamburger', function (e) {
+        $('#navDrawer').toggleClass('open');
+      });
+
+
 });
 
 

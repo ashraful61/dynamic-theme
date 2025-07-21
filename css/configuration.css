@@ -463,35 +463,8 @@ body[data-theme="colored"] .apply-btn:focus {
     background: #d13a00;
 }
 
-@media (max-width: 600px) {
-    .top-nav {
-        padding: 0 0.7rem;
-        height: 56px;
-    }
 
-    .nav-logo {
-        width: 32px;
-        height: 32px;
-    }
 
-    .nav-avatar-img {
-        width: 28px;
-        height: 28px;
-    }
-
-    .dashboard-main {
-        padding: 1.2rem 0.2rem 0.5rem 0.2rem;
-    }
-
-    .dashboard-greeting {
-        font-size: 1.1rem;
-        margin-top: 1rem;
-    }
-
-    .dashboard-card {
-        padding: 1.2rem 0.7rem 1rem 0.7rem;
-    }
-}
 
 
 
@@ -527,6 +500,55 @@ body[data-theme="colored"] .apply-btn:focus {
         flex-direction: row;
         padding: 0.7rem 0;
     }
+
+    .top-nav {
+        padding: 0 0.7rem;
+        height: 56px;
+    }
+
+    .nav-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .nav-avatar-img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .dashboard-main {
+        padding: 1.2rem 0.2rem 0.5rem 0.2rem;
+    }
+
+    .dashboard-greeting {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+    }
+
+    .dashboard-card {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+    }
+
+    body[data-nav="topbar"] .top-nav {
+        display: flex;
+    }
+
+    body[data-nav="sidebar"] .top-nav {
+        display: flex;
+    }
+
+    body[data-nav="sidebar"] .side-nav {
+        display: none;
+    }
+
+    body[data-nav="sidebar"] .config-main {
+        margin-left: 16px;
+    }
+
+    .top-bar-section {
+        display: none;
+    }
+
 }
 
 .dark-home-menu,
@@ -537,17 +559,24 @@ body[data-theme="colored"] .apply-btn:focus {
 
 
 /* For dark or colored theme, swap */
-body[data-theme="dark"] .home-menu, body[data-theme="dark"] .data-menu {
+body[data-theme="dark"] .home-menu,
+body[data-theme="dark"] .data-menu {
     display: none;
 }
 
-body[data-theme="dark"] .dark-home-menu, body[data-theme="dark"] .dark-data-menu {
-    display: inline;
-}
-body[data-theme="colred"] .home-menu, body[data-theme="colored"] .data-menu, body[data-theme="colored"] .colored-settings-menu {
+body[data-theme="dark"] .dark-home-menu,
+body[data-theme="dark"] .dark-data-menu {
     display: inline;
 }
 
-body[data-theme="colored"] .dark-home-menu, body[data-theme="colored"] .dark-data-menu, .body[data-theme="colored"] .settings-menu {
+body[data-theme="colred"] .home-menu,
+body[data-theme="colored"] .data-menu,
+body[data-theme="colored"] .colored-settings-menu {
+    display: inline;
+}
+
+body[data-theme="colored"] .dark-home-menu,
+body[data-theme="colored"] .dark-data-menu,
+.body[data-theme="colored"] .settings-menu {
     display: none;
 }

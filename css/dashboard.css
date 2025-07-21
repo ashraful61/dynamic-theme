@@ -124,15 +124,6 @@
     opacity: 0.3;
 }
 
-@media (max-width: 900px) {
-    .dashboard-cards {
-        grid-template-columns: auto;
-        align-items: center;
-        gap: 1.5rem;
-    }
-
-}
-
 
 
 .dashboard-main,
@@ -141,4 +132,13 @@
     max-width: 1200px;
     margin: 0 auto;
     box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+    .dashboard-cards {
+        grid-template-columns: auto;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
 }

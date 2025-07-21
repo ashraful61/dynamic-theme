@@ -13,6 +13,7 @@
 </head>
 
 <body class="dashboard-bg">
+    <!-- Topbar Navigation -->
     <header class="top-nav" id="topbar-nav">
         <div class="login-header">
             <a href="dashboard.html">
@@ -24,11 +25,11 @@
                     </span>
                 </div>
             </a>
-            <div class="navbar">
+            <div class="navbar desktop-nav">
                 <nav class="nav-links">
                     <a href="dashboard.html">Home</a>
                     <a href="configuration.html">Configuration</a>
-                    <a href="datalist.html" class="active">Data List</a>
+                    <a href="datalist.html" class="acctive">Data List</a>
                 </nav>
                 <div class="nav-avatar" id="profile-avatar">
                     <img class="nav-avatar-img profile-menu-btn cursor" src="img/dashboard/avatar.jpg"
@@ -50,8 +51,50 @@
                     </div>
                 </div>
             </div>
+            <!-- Hamburger for Mobile -->
+            <div class="hamburger" id="hamburger">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect y="6" width="32" height="4" rx="2" fill="black" />
+                    <rect y="14" width="32" height="4" rx="2" fill="black" />
+                    <rect y="22" width="32" height="4" rx="2" fill="black" />
+                </svg>
+            </div>
         </div>
     </header>
+
+    <!-- Slide-in Drawer -->
+    <nav class="nav-drawer" id="navDrawer">
+        <div style="border-bottom: 1px solid #dedede;">
+            <div class="drawer-header">
+                <a href="dashboard.html">
+                    <div class="login-logo">
+                        <img src="img/Logo.png" width="38" height="38" alt="Dependable Solutions Logo">
+                        <span class="logo-text">
+                            Dependable<br>
+                            Solutions<span class="reg">&reg;</span>
+                        </span>
+                    </div>
+                </a>
+                <div class="hamburger" id="hamburger">
+                    <img width="38" src="img/login/X.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar">
+            <div class="flex" style="flex-direction: column; font-size: 14px;padding-left: 35px; padding-top:16px">
+                <a href="dashboard.html">Home</a>
+                <a href="configuration.html">Configuration</a>
+                <a href="datalist.html" class="active">Data List</a>
+                <a href="" text-black">Profile</a>
+                <a href="" text-black">Settings</a>
+                <a href="" text-black">Help</a>
+                <a href="" text-black">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+
     <main>
         <nav class="breadcrumb">
             <span class="breadcrumb-home">
@@ -204,10 +247,11 @@
                             <div class="modal-form-group">
                                 <label>Project Duration</label><br>
 
-                                    <div class="modal-date-range">
-                                        <input type="date" id="proj-start" class="modal-input-date" placeholder="Started on">
-                                        <input type="date" id="proj-end" class="modal-input-date" placeholder="Ended on">
-                                    </div>
+                                <div class="modal-date-range">
+                                    <input type="date" id="proj-start" class="modal-input-date"
+                                        placeholder="Started on">
+                                    <input type="date" id="proj-end" class="modal-input-date" placeholder="Ended on">
+                                </div>
 
                             </div>
                             <div class="modal-actions">
