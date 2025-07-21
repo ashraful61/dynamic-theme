@@ -122,4 +122,33 @@
         width: 100%;
     }
 
+    .card-hover-action {
+        display: flex;
+        position: static;
+        transform: none;
+        margin-top: 16px;
+        justify-content: flex-start;
+    }
+
+    .dashboard-card:hover,
+    .dashboard-card:focus-within {
+        background: #ffffff;
+    }
+
+    /* 
+    .dashboard-card:hover .card-hover-action,
+    .dashboard-card:focus-within .card-hover-action {
+        display: flex;
+    } */
+
+    .dashboard-card:hover .card-content,
+    .dashboard-card:focus-within .card-content {
+        opacity: 1;
+    }
+
+    .dashboard-card:hover .card-icon,
+    .dashboard-card:focus-within .card-icon {
+        opacity: 1;
+    }
+
 }
