@@ -7,9 +7,11 @@
     <title>Add Data List Item - Dependable Solutions</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/add-data-list.css">
+    <link rel="stylesheet" href="css/calendar.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/add-data-list.js"></script>
+    <script src="js/calendar.js"></script>
 </head>
 
 <body class="dashboard-bg">
@@ -20,7 +22,7 @@
                 <div class="login-logo">
                     <img class="logo-img-light" src="img/Logo-light.png" alt="Logo light">
                     <img class="logo-img-dark" src="img/Logo-dark.png" alt="Logo dark">
-                 </div>
+                </div>
             </a>
             <div class="navbar desktop-nav">
                 <nav class="nav-links">
@@ -67,7 +69,7 @@
                     <div class="login-logo">
                         <img class="logo-img-light" src="img/Logo-light.png" alt="Logo light">
                         <img class="logo-img-dark" src="img/Logo-dark.png" alt="Logo dark">
-                     </div>
+                    </div>
                 </a>
                 <div class="hamburger" id="hamburger">
                     <img width="22" src="img/login/X.png" alt="">
@@ -151,7 +153,36 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="joinedOn">Joined on</label>
-                            <input type="date" id="joinedOn">
+                            <div style="position: relative;">
+                                <div class="open-calendar-modal">
+                                    <img src="img/add-data-list/CalendarBlank.png" alt="">
+                                </div>
+                                <div>
+                                    <div class="calendar-container">
+                                        <div class="calendar-header">
+                                            <button id="prev">&larr;</button>
+                                            <span id="monthYear">Apr 2025</span>
+                                            <button id="next">&rarr;</button>
+                                        </div>
+                                        <div class="calendar-days">
+                                            <div>S</div>
+                                            <div>M</div>
+                                            <div>T</div>
+                                            <div>W</div>
+                                            <div>T</div>
+                                            <div>F</div>
+                                            <div>S</div>
+                                        </div>
+                                        <div class="calendar-grid" id="calendarGrid">
+                                            <!-- Days injected by JS -->
+                                        </div>
+                                        <div class="calendar-footer">
+                                            <button class="cancel-btn">Cancel</button>
+                                            <button class="apply-btn">Apply</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label>Status</label>
