@@ -48,6 +48,7 @@ $(document).ready(function() {
         localStorage.setItem('ds_theme', currentTheme);
         localStorage.setItem('ds_nav', currentNav);
         applyThemeNav(currentTheme, currentNav);
+        alert('Saved successfully');
     });
     // On page load, always apply saved preferences
     applyThemeNav(currentTheme, currentNav);

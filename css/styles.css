@@ -253,9 +253,9 @@ body[data-theme="colored"] .nav-links a:hover {
 .nav-drawer a {
     color: #000000;
     text-decoration: none;
-    margin-bottom: 20px;
-    font-size: 1.1rem;
     transition: color 0.3s;
+    margin-bottom: 18px;
+    font-size: 14px;
 }
 
 .nav-drawer a.active {
