@@ -66,4 +66,26 @@ $(document).ready(function () {
     });
 
     renderCalendar(currentDate);
+
+    const toggleButton = document.querySelector(".open-calendar-modal");
+    const calendarMain = document.querySelector(".calendar-main");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    const applyBtn = document.querySelector(".apply-btn");
+
+    // Hide calendar initially
+    calendarMain.style.display = "none";
+
+    // Show calendar on image click
+    toggleButton.addEventListener("click", () => {
+        calendarMain.style.display = "block";
+    });
+
+    // Hide calendar on Cancel or Apply
+    cancelBtn.addEventListener("click", () => {
+        calendarMain.style.display = "none";
+    });
+
+    applyBtn.addEventListener("click", () => {
+        calendarMain.style.display = "none";
+    });
 });
