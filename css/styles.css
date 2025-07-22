@@ -284,6 +284,9 @@ body[data-theme="colored"] .nav-links a:hover {
 .logo-img-dark {
     display: none;
 }
+.relative {
+    position: relative;
+}
 
 body[data-theme="dark"] .logo-img-dark,
 body[data-theme="colored"] .logo-img-dark {

@@ -1,5 +1,5 @@
   .calendar-content {
-    width: 300px;
+    width: 290px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -12,6 +12,14 @@
     align-items: center;
     font-weight: bold;
     margin-bottom: 10px;
+  }
+
+  .calendar-header h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #051B44;
   }
 
   .calendar-header button {
@@ -39,8 +47,8 @@
     border-radius: 6px;
     cursor: pointer;
     font-size: 14px;
-    width: 36px;
-    height: 32px;
+    width: 30px;
+    height: 26px;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.5px;
@@ -52,7 +60,7 @@
 
   .calendar-grid div:hover {
     background-color: #0A090A;
-    color:#ffffff;
+    color: #ffffff;
   }
 
   .calendar-grid .selected {
@@ -63,24 +71,47 @@
   .calendar-footer {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
     margin-top: 12px;
   }
 
-  .cancel-btn {
-    background: #f0f0f0;
-    border: none;
+  .cancel-apply-btn {
+    font-size: 18px;
     padding: 8px 12px;
     border-radius: 6px;
     cursor: pointer;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0%;
+    width: 48%;
   }
 
-  .apply-btn {
-    background: #0066ff;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    cursor: pointer;
+  .cancel-btnc,
+  .cancel-btn-fromDate,
+  .cancel-btn-toDate {
+    background: #ffffff;
+    color: #68696C;
+    border: 1px solid #DEE2ED;
+  }
+
+  .cancel-btnc:hover,
+  .cancel-btn-fromDate:hover,
+  .cancel-btn-toDate:hover {
+    border: 1px solid #000;
+  }
+
+  .apply-btn,
+  .apply-btn-toDate,
+  .apply-btn-fromDate {
+    background: #0248FF;
+    border: 1px solid #0248FF;
+    color: #ffffff;
+  }
+
+  .apply-btn:hover,
+  .apply-btn-toDate:hover,
+  .apply-btn-formDate:hover {
+    background: #0b49e6;
   }
 
 
@@ -88,6 +119,10 @@
     padding: 12px 16px;
     text-align: right;
     border: 1px solid #DEE2ED;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
   }
 
   .joined-date {
@@ -101,4 +136,44 @@
     z-index: 10;
     padding: 8px 0;
     border: 1px solid #DEE2ED;
+  }
+
+  .from-date {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 46px;
+    min-width: 140px;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    z-index: 10;
+    padding: 8px 0;
+    border: 1px solid #DEE2ED;
+  }
+
+  .to-date {
+    display: none;
+    position: absolute;
+    right: 3px;
+    top: 46px;
+    min-width: 140px;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    z-index: 10;
+    padding: 8px 0;
+    border: 1px solid #DEE2ED;
+  }
+
+  .toggle-calendar-icon-fromDate{
+    display: flex;
+    justify-content: space-between;
+    border-right: 1px solid #DEE2ED;
+    padding-right: 10px;
+  }
+  
+  .toggle-calendar-icon-toDate{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+
   }

@@ -117,7 +117,7 @@
                 <button class="tab-link" id="form-tab">Form Controls</button>
                 <button class="tab-link inactive" id="nested-tab">Nested Tables</button>
             </div>
-            <!-- <form id="main-form"> -->
+            <div id="main-form">
                 <div class="form-inner">
                     <div class="form-row">
                         <div class="form-group">
@@ -153,16 +153,21 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="joinedOn">Joined on</label>
-                            <div style="position: relative;">
+                            <div class="relative">
                                 <div class="toggle-calendar-icon">
+                                    <span id="selectedValue"></span>
                                     <img src="img/add-data-list/CalendarBlank.png" alt="">
                                 </div>
                                 <div class="joined-date" id="joinedDate">
                                     <div class="calendar-content">
                                         <div class="calendar-header">
-                                            <button id="prev"></button>
-                                            <span id="monthYear">Apr 2025</span>
-                                            <button id="next"></button>
+                                            <button id="prev">
+                                                <img src="img/previous.png" alt="previous">
+                                            </button>
+                                            <h4 id="monthYear">Apr 2025</h4>
+                                            <button id="next">
+                                                <img src="img/next.png" alt="next">
+                                            </button>
                                         </div>
                                         <div class="calendar-days">
                                             <div>S</div>
@@ -177,8 +182,8 @@
                                             <!-- Days injected by JS -->
                                         </div>
                                         <div class="calendar-footer">
-                                            <button class="cancel-btn">Cancel</button>
-                                            <button class="apply-btn">Apply</button>
+                                            <button class="cancel-btnc cancel-apply-btn">Cancel</button>
+                                            <button class="apply-btn cancel-apply-btn">Apply</button>
                                         </div>
                                     </div>
                                 </div>
@@ -217,8 +222,77 @@
                             <label>Project Duration</label>
                             <div class="date-range">
                                 <div class="date-container">
-                                    <input class="from-date" name="fromDate" type="date" placeholder="From" />
-                                    <input class="to-date" name="toDate" type="date" placeholder="To" />
+                                    <div class="relative date-width">
+                                        <div class="toggle-calendar-icon-fromDate">
+                                            <span id="selectedValuefromDate"></span>
+                                            <img src="img/add-data-list/CalendarBlank.png" alt="">
+                                        </div>
+                                        <div class="from-date" id="fromDate">
+                                            <div class="calendar-content">
+                                                <div class="calendar-header">
+                                                    <button id="prevfromDate">
+                                                        <img src="img/previous.png" alt="previous">
+                                                    </button>
+                                                    <h4 id="monthYearfromDate">Apr 2025</h4>
+                                                    <button id="nextfromDate">
+                                                        <img src="img/next.png" alt="next">
+                                                    </button>
+                                                </div>
+                                                <div class="calendar-days">
+                                                    <div>S</div>
+                                                    <div>M</div>
+                                                    <div>T</div>
+                                                    <div>W</div>
+                                                    <div>T</div>
+                                                    <div>F</div>
+                                                    <div>S</div>
+                                                </div>
+                                                <div class="calendar-grid" id="calendarGridfromDate">
+                                                    <!-- Days injected by JS -->
+                                                </div>
+                                                <div class="calendar-footer">
+                                                    <button class="cancel-btn-fromDate cancel-apply-btn">Cancel</button>
+                                                    <button class="apply-btn-fromDate cancel-apply-btn">Apply</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <input class="to-date" name="toDate" placeholder="To" /> -->
+                                    <div class="relative date-width">
+                                        <div class="toggle-calendar-icon-toDate">
+                                            <span id="selectedValuetoDate"></span>
+                                            <img src="img/add-data-list/CalendarBlank.png" alt="">
+                                        </div>
+                                        <div class="to-date" id="toDate">
+                                            <div class="calendar-content">
+                                                <div class="calendar-header">
+                                                    <button id="prevtoDate">
+                                                        <img src="img/previous.png" alt="previous">
+                                                    </button>
+                                                    <h4 id="monthYeartoDate">Apr 2025</h4>
+                                                    <button id="nexttoDate">
+                                                        <img src="img/next.png" alt="next">
+                                                    </button>
+                                                </div>
+                                                <div class="calendar-days">
+                                                    <div>S</div>
+                                                    <div>M</div>
+                                                    <div>T</div>
+                                                    <div>W</div>
+                                                    <div>T</div>
+                                                    <div>F</div>
+                                                    <div>S</div>
+                                                </div>
+                                                <div class="calendar-grid" id="calendarGridtoDate">
+                                                    <!-- Days injected by JS -->
+                                                </div>
+                                                <div class="calendar-footer">
+                                                    <button class="cancel-btn-toDate cancel-apply-btn">Cancel</button>
+                                                    <button class="apply-btn-toDate cancel-apply-btn">Apply</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
@@ -230,7 +304,7 @@
                         onclick="window.location.href='datalist.html'">Cancel</button>
                     <button type="submit" class="save-btn">Save Item</button>
                 </div>
-            <!-- </form> -->
+            </div>
             <div id="nested-table-section">
                 <div class="nested-table-header">
                     <div></div>
@@ -245,7 +319,7 @@
                             <img width="24" src="img/login/X.png" alt="">
                         </div>
                         <div class="modal-title">New Project</div>
-                        <!-- <form id="project-form"> -->
+                        <div id="project-form">
                             <div class="form-group">
                                 <label class="form-label">Project Name</label>
                                 <input type="text" id="proj-name" placeholder="e.g. DRM UI/UX Design"
@@ -265,7 +339,8 @@
                             <div class="modal-form-group">
                                 <label class="form-label">Project Status</label>
                                 <label class="modal-radio"><input type="radio" name="proj-status" value="Completed"
-                                        checked> Completed</label>
+                                        checked>
+                                    Completed</label>
                                 <label class="modal-radio"><input type="radio" name="proj-status" value="In Progress">
                                     In progress</label>
                             </div>
@@ -283,7 +358,7 @@
                                 <button type="button" id="cancel-project-btn" class="cancel-project-btn">Cancel</button>
                                 <button type="submit" class="save-project-btn">Save Project</button>
                             </div>
-                        <!-- </form> -->
+                        </div>
                     </div>
                 </div>
                 <!-- End Modal -->

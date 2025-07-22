@@ -146,32 +146,76 @@ $(document).ready(function () {
         }
     });
 
-        $(document).on('click', '.toggle-calendar-icon', function (e) {
-            e.stopPropagation();
-            const popup = $(`#joinedDate`);
-            const isVisible = popup.is(':visible');
-            // Hide all popups first
-            $('.joined-date').hide();
-            // Toggle this one
-            if (!isVisible) {
-                popup.show();
-            }
-        });
-        // Hide popup when clicking outside
-        // $(document).on('click', function () {
-        //     $('.joined-date').hide();
-        // });
-        // Prevent popup from closing when clicking inside
-        $(document).on('click', '.joined-date', function (e) {
-            e.stopPropagation();
-        });
-        $(document).on('click', '.cancel-btn', function (e) {
-            $('.joined-date').hide();
-        });
-        $(document).on('click', '.apply-btn', function (e) {
-            $('.joined-date').hide();
-        });
-    
+    $(document).on('click', '.toggle-calendar-icon', function (e) {
+        e.stopPropagation();
+        const popup = $(`#joinedDate`);
+        const isVisible = popup.is(':visible');
+        // Hide all popups first
+        $('.joined-date').hide();
+        // Toggle this one
+        if (!isVisible) {
+            popup.show();
+        }
+    });
 
+    $(document).on('click', '.joined-date', function (e) {
+        e.stopPropagation();
+    });
+    $(document).on('click', '.cancel-btnc', function (e) {
+        e.stopPropagation();
+        $('.joined-date').hide();
+    });
+    $(document).on('click', '.apply-btn', function (e) {
+        e.stopPropagation();
+        $('.joined-date').hide();
+    });
+
+
+    $(document).on('click', '.toggle-calendar-icon-fromDate', function (e) {
+        e.stopPropagation();
+        const popup = $(`#fromDate`);
+        const isVisible = popup.is(':visible');
+        // Hide all popups first
+        $('.from-date').hide();
+        // Toggle this one
+        if (!isVisible) {
+            popup.show();
+        }
+    });
+
+    $(document).on('click', '.from-date', function (e) {
+        e.stopPropagation();
+    });
+    $(document).on('click', '.cancel-btn-fromDate', function (e) {
+        e.stopPropagation();
+        $('.from-date').hide();
+    });
+    $(document).on('click', '.apply-btn-fromDate', function (e) {
+        e.stopPropagation();
+        $('.from-date').hide();
+    });
+
+    $(document).on('click', '.toggle-calendar-icon-toDate', function (e) {
+        e.stopPropagation();
+        const popup = $(`#toDate`);
+        const isVisible = popup.is(':visible');
+        // Hide all popups first
+        $('.to-date').hide();
+        // Toggle this one
+        if (!isVisible) {
+            popup.show();
+        }
+    });
+    $(document).on('click', '.to-date', function (e) {
+        e.stopPropagation();
+    });
+    $(document).on('click', '.cancel-btn-toDate', function (e) {
+        e.stopPropagation();
+        $('.to-date').hide();
+    });
+    $(document).on('click', '.apply-btn-toDate', function (e) {
+        e.stopPropagation();
+        $('.to-date').hide();
+    });
 
 });
