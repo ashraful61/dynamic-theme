@@ -137,31 +137,44 @@ body[data-theme="light"] .side-nav {
 .side-nav-links {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 4px;
 }
 
 .side-nav-links a {
-    color: inherit;
+    color: #0A090A;
     text-decoration: none;
-    font-size: 1.08rem;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 400;
     padding: 0.7rem 1rem;
     border-radius: 8px;
     display: flex;
     align-items: center;
     gap: 0.7rem;
     transition: background 0.2s, color 0.2s;
+    line-height: 20px;
+    letter-spacing: 0%;
 }
 
-.side-nav-links a.active,
-.side-nav-links a:hover {
-    background: #eaf0fb;
+.side-nav-links a.active {
     color: #0248FF;
+    background: #E5EDFF;
 }
 
-body[data-theme="dark"] .side-nav-links a.active,
-body[data-theme="dark"] .side-nav-links a:hover {
+body[data-theme="light"] .side-nav-links a:hover {
+    color: #0248FF;
     background: #E5EDFF;
+}
+
+body[data-theme="dark"] .side-nav-links a {
+    color: #ffffff;
+}
+
+body[data-theme="dark"] .side-nav-links a.active {
+    color: #0248FF;
+    background: #ffffff;
+}
+
+body[data-theme="dark"] .side-nav-links a:hover {
     color: #0248FF;
 }
 
@@ -169,6 +182,22 @@ body[data-theme="colored"] .side-nav-links a.active,
 body[data-theme="colored"] .side-nav-links a:hover {
     background: #000000;
     color: #fff;
+}
+
+.side-nav-links .dark-colored {
+    display: block;
+}
+
+.side-nav-links .light {
+    display: none;
+}
+
+body[data-theme="light"] .side-nav-links .dark-colored {
+    display: none;
+}
+
+body[data-theme="light"] .side-nav-links .light {
+    display: block;
 }
 
 .side-nav-footer {
@@ -337,7 +366,7 @@ body[data-theme="colored"] .nav-option {
 
 body[data-theme="light"] .nav-option .light,
 body[data-theme="colored"] .nav-option .colored,
-body[data-theme="dark"] .nav-option .dark  {
+body[data-theme="dark"] .nav-option .dark {
     display: block;
 }
 
@@ -347,8 +376,7 @@ body[data-theme="dark"] .nav-option .light,
 body[data-theme="colored"] .nav-option .dark,
 body[data-theme="light"] .nav-option .dark,
 body[data-theme="dark"] .nav-option .colored,
-body[data-theme="light"] .nav-option .colored
-{
+body[data-theme="light"] .nav-option .colored {
     display: none;
 }
 
