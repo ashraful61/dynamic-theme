@@ -1,20 +1,11 @@
-/* body {
-    font-family: Arial, sans-serif;
-    background: #fffbe7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  } */
-  
-  .calendar-container {
-    width: 250px;
+  .calendar-content {
+    width: 300px;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
   }
-  
+
   .calendar-header {
     display: flex;
     justify-content: space-between;
@@ -22,14 +13,14 @@
     font-weight: bold;
     margin-bottom: 10px;
   }
-  
+
   .calendar-header button {
     background: none;
     border: none;
     font-size: 20px;
     cursor: pointer;
   }
-  
+
   .calendar-days,
   .calendar-grid {
     display: grid;
@@ -37,34 +28,44 @@
     text-align: center;
     gap: 6px;
   }
-  
+
   .calendar-days div {
     font-weight: bold;
     color: #888;
   }
-  
+
   .calendar-grid div {
     padding: 8px 0;
     border-radius: 6px;
     cursor: pointer;
     font-size: 14px;
+    width: 36px;
+    height: 32px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   }
-  
+
   .calendar-grid div:hover {
-    background-color: #f0f0f0;
+    background-color: #0A090A;
+    color:#ffffff;
   }
-  
+
   .calendar-grid .selected {
-    background-color: black;
+    background-color: #0A090A;
     color: white;
   }
-  
+
   .calendar-footer {
     display: flex;
     justify-content: space-between;
     margin-top: 12px;
   }
-  
+
   .cancel-btn {
     background: #f0f0f0;
     border: none;
@@ -72,7 +73,7 @@
     border-radius: 6px;
     cursor: pointer;
   }
-  
+
   .apply-btn {
     background: #0066ff;
     color: white;
@@ -81,4 +82,23 @@
     border-radius: 6px;
     cursor: pointer;
   }
-  
+
+
+  .toggle-calendar-icon {
+    padding: 12px 16px;
+    text-align: right;
+    border: 1px solid #DEE2ED;
+  }
+
+  .joined-date {
+    display: none;
+    position: absolute;
+    right: 3px;
+    top: 46px;
+    min-width: 140px;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    z-index: 10;
+    padding: 8px 0;
+    border: 1px solid #DEE2ED;
+  }

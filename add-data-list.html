@@ -117,7 +117,7 @@
                 <button class="tab-link" id="form-tab">Form Controls</button>
                 <button class="tab-link inactive" id="nested-tab">Nested Tables</button>
             </div>
-            <form id="main-form">
+            <!-- <form id="main-form"> -->
                 <div class="form-inner">
                     <div class="form-row">
                         <div class="form-group">
@@ -154,15 +154,15 @@
                         <div class="form-group">
                             <label for="joinedOn">Joined on</label>
                             <div style="position: relative;">
-                                <div class="open-calendar-modal">
+                                <div class="toggle-calendar-icon">
                                     <img src="img/add-data-list/CalendarBlank.png" alt="">
                                 </div>
-                                <div class="calendar-main">
-                                    <div class="calendar-container">
+                                <div class="joined-date" id="joinedDate">
+                                    <div class="calendar-content">
                                         <div class="calendar-header">
-                                            <button id="prev">&larr;</button>
+                                            <button id="prev"></button>
                                             <span id="monthYear">Apr 2025</span>
-                                            <button id="next">&rarr;</button>
+                                            <button id="next"></button>
                                         </div>
                                         <div class="calendar-days">
                                             <div>S</div>
@@ -230,7 +230,7 @@
                         onclick="window.location.href='datalist.html'">Cancel</button>
                     <button type="submit" class="save-btn">Save Item</button>
                 </div>
-            </form>
+            <!-- </form> -->
             <div id="nested-table-section">
                 <div class="nested-table-header">
                     <div></div>
@@ -245,7 +245,7 @@
                             <img width="24" src="img/login/X.png" alt="">
                         </div>
                         <div class="modal-title">New Project</div>
-                        <form id="project-form">
+                        <!-- <form id="project-form"> -->
                             <div class="form-group">
                                 <label class="form-label">Project Name</label>
                                 <input type="text" id="proj-name" placeholder="e.g. DRM UI/UX Design"
@@ -283,7 +283,7 @@
                                 <button type="button" id="cancel-project-btn" class="cancel-project-btn">Cancel</button>
                                 <button type="submit" class="save-project-btn">Save Project</button>
                             </div>
-                        </form>
+                        <!-- </form> -->
                     </div>
                 </div>
                 <!-- End Modal -->

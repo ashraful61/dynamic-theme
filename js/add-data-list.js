@@ -145,4 +145,33 @@ $(document).ready(function () {
             }
         }
     });
+
+        $(document).on('click', '.toggle-calendar-icon', function (e) {
+            e.stopPropagation();
+            const popup = $(`#joinedDate`);
+            const isVisible = popup.is(':visible');
+            // Hide all popups first
+            $('.joined-date').hide();
+            // Toggle this one
+            if (!isVisible) {
+                popup.show();
+            }
+        });
+        // Hide popup when clicking outside
+        // $(document).on('click', function () {
+        //     $('.joined-date').hide();
+        // });
+        // Prevent popup from closing when clicking inside
+        $(document).on('click', '.joined-date', function (e) {
+            e.stopPropagation();
+        });
+        $(document).on('click', '.cancel-btn', function (e) {
+            $('.joined-date').hide();
+        });
+        $(document).on('click', '.apply-btn', function (e) {
+            $('.joined-date').hide();
+        });
+    
+
+
 });
