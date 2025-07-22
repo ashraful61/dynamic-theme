@@ -175,5 +175,20 @@
     display: flex;
     justify-content: space-between;
     padding-left: 10px;
-
   }
+
+
+  
+@media (max-width: 600px) {
+  
+  .toggle-calendar-icon-fromDate{
+    padding-right: 0;
+    padding: 10px;
+    border-right: 0;
+  }
+  
+  .toggle-calendar-icon-toDate{
+    padding-left: 0;
+    padding: 10px;
+  }
+}
