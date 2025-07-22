@@ -276,7 +276,7 @@ body[data-theme="light"] .configuration-text {
     padding: 1.1rem 1.1rem 0.7rem 1.1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     cursor: pointer;
     transition: border 0.2s, box-shadow 0.2s, background 0.2s;
     margin-bottom: 1rem;
@@ -294,8 +294,6 @@ body[data-theme="light"] .configuration-text {
     border-radius: 14px;
     box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.08);
     padding: 1.1rem 1.1rem 0.7rem 1.1rem;
-    min-width: 170px;
-    max-width: 220px;
     flex: 1 1 170px;
     display: flex;
     flex-direction: column;
@@ -327,13 +325,64 @@ body[data-theme="dark"] .nav-option.selected {
 body[data-theme="colored"] .theme-option.selected,
 body[data-theme="colored"] .nav-option.selected {
     border: 2px solid #ff4f17;
-    background: #ffede5;
+    background: #000000;
 }
 
 body[data-theme="colored"] .theme-option,
 body[data-theme="colored"] .nav-option {
     background: #23272f;
     color: #fff;
+}
+
+
+body[data-theme="light"] .nav-option .light,
+body[data-theme="colored"] .nav-option .colored,
+body[data-theme="dark"] .nav-option .dark  {
+    display: block;
+}
+
+
+body[data-theme="colored"] .nav-option .light,
+body[data-theme="dark"] .nav-option .light,
+body[data-theme="colored"] .nav-option .dark,
+body[data-theme="light"] .nav-option .dark,
+body[data-theme="dark"] .nav-option .colored,
+body[data-theme="light"] .nav-option .colored
+{
+    display: none;
+}
+
+.icon-text-container {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-text-container .dark-colored {
+    display: block;
+}
+
+.icon-text-container .light {
+    display: none;
+}
+
+.icon-text-container p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #fff;
+}
+
+body[data-theme="light"] .icon-text-container .dark-colored {
+    display: none;
+}
+
+body[data-theme="light"] .icon-text-container .light {
+    display: block;
+}
+
+body[data-theme="light"] .icon-text-container p {
+    color: #1C1C1C;
 }
 
 .theme-preview,
