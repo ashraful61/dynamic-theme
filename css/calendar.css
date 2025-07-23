@@ -123,6 +123,8 @@
     display: flex;
     justify-content: space-between;
     border-radius: 8px;
+    color:#0A090A;
+    opacity: 0.7;
   }
 
   .joined-date {
@@ -169,12 +171,16 @@
     justify-content: space-between;
     border-right: 1px solid #DEE2ED;
     padding-right: 10px;
+    color:#0A090A;
+    opacity: 0.7;
   }
   
   .toggle-calendar-icon-toDate{
     display: flex;
     justify-content: space-between;
     padding-left: 10px;
+    color:#0A090A;
+    opacity: 0.7;
   }
 
 

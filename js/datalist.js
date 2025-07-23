@@ -73,12 +73,18 @@ function renderTableRows() {
         const tr = document.createElement('tr');
         if (row.selected) tr.classList.add('selected');
         tr.innerHTML = `
-                <td><input type="checkbox"> &nbsp; ${row.id}</td>
+                <td><input type="checkbox"> ${row.id}</td>
                 <td class="img-and-name"><img src="img/table-avatar.jpg" class="user-avatar"> ${row.name}</td>
                 <td>${row.email}</td>
                 <td>${row.address}</td>
                 <td><span style="display:flex;align-items:center;gap:4px;"><img src='img/add-data-list/CalendarBlank.png' /> ${row.date}</span></td>
-                <td><span class="status ${statusClassMap[row.status]}"><span class="status-dot ${statusClassMap[row.status]}"></span> ${row.statusText}</span></td>
+                <td>
+                  <span class="status ${statusClassMap[row.status]}">
+                    <span class="status-dot ${statusClassMap[row.status]}">
+                    </span> 
+                    ${row.statusText}
+                </span>
+                /td>
                 <td class="table-actions" style="position:relative;">
                     <img src="img/DownloadSimple.png" alt=""> &nbsp;
                     <img src="img/DotsThreeOutlineVertical2.png" alt="" class="dots-menu-btn" data-row="${idx}" style="cursor:pointer;">

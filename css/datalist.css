@@ -64,6 +64,11 @@
   text-align: left;
 }
 
+.data-table td {
+  color:#0A090A
+}
+
+
 .data-table th {
   background: #ffffff;
   font-weight: 600;
@@ -197,6 +202,12 @@
   margin-top: 16px;
 }
 
+.data-table th,
+.data-table td {
+  padding: 12px 16px;
+  font-size: 12px;
+}
+
 /* Responsive styles for table and layout */
 @media (max-width: 1100px) {
   .table-container {
@@ -204,11 +215,6 @@
     padding: 0 0 8px 0;
   }
 
-  .data-table th,
-  .data-table td {
-    padding: 12px 8px;
-    font-size: 15px;
-  }
 }
 
 

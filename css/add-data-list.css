@@ -4,7 +4,7 @@ body {
 }
 
 .form-container {
-    padding: 32px 2px;
+    padding: 20px 2px;
 }
 
 .form-title {
@@ -23,26 +23,29 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 6px;
 }
 
 .form-group label {
-    font-size: 15px;
-    color: #334155;
+    font-size: 14px;
+    color: #1C1C1C;
     font-weight: 500;
     margin-bottom: 8px;
+    line-height: 160%;
+    letter-spacing: 0%;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     padding: 10px 12px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #DEE2ED;
     border-radius: 8px;
     font-size: 15px;
-    background: #f8fafc;
+    background: #ffffff;
     outline: none;
     transition: border 0.2s;
+    color: #0A090A;
+    opacity: 0.7;
 }
 
 .form-group input:focus,
@@ -64,20 +67,23 @@ body {
 
 .skill-tag {
     background: #DEE2ED;
-    color: #334155;
+    color: #0A090A;
     border: none;
     border-radius: 8px;
     padding: 8px 20px;
-    font-size: 15px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     gap: 6px;
     cursor: pointer;
     transition: background 0.18s, color 0.18s;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0;
 }
 
 .skill-tag.selected {
-    background: #18191b;
+    background: #0A090A;
     color: #fff;
 }
 
@@ -98,6 +104,10 @@ body {
     display: flex;
     gap: 18px;
     align-items: center;
+    color: #0A090A;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
 }
 
 
@@ -112,24 +122,28 @@ body {
 .cancel-btn {
     background: none;
     border: 1px solid #cdcdcd;
-    color: #64748b;
-    font-size: 17px;
+    color: #68696C;
+    font-size: 18px;
     padding: 12px 0;
     border-radius: 8px;
     cursor: pointer;
     flex: 0.5;
+    line-height: 28px;
+    font-weight: 600;
 }
 
 .save-btn {
-    background: #2563eb;
+    background: #0248FF;
     color: #fff;
     border: none;
     border-radius: 8px;
     padding: 12px 0;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     flex: 0.5;
+    line-height: 28px;
+    font-weight: 600;
 }
 
 
@@ -137,23 +151,26 @@ body {
     display: flex;
     gap: 24px;
     border-bottom: 1px solid #e2e8f0;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 }
 
 .tab-link {
     padding: 10px 0;
-    font-size: 15px;
-    color: #2563eb;
-    font-weight: 500;
+    font-size: 14px;
+    color: #0248FF;
+    font-weight: 600;
     border: none;
     background: none;
     cursor: pointer;
-    border-bottom: 2px solid #2563eb;
+    border-bottom: 2px solid #0248FF;
+    line-height: 20px;
+    letter-spacing: 0%;
 }
 
 .tab-link.inactive {
-    color: #64748b;
+    color: #68696C;
     border-bottom: none;
+    font-weight: 400;
 }
 
 .form-inner {
@@ -167,7 +184,6 @@ body {
 .form-group-skills {
     flex: 0.7;
 }
-
 
 #nested-table-section {
     display: none;
@@ -345,7 +361,6 @@ body {
 
 .date-range {
     display: flex;
-    margin-top: 8px;
 }
 
 .date-container {
@@ -388,9 +403,7 @@ body {
     color: #818185;
 }
 
-.header-row {
-    border-bottom: 1px solid #DEE2ED;
-}
+
 
 #proj-name:focus {
     border: 1px solid black !important;
@@ -472,6 +485,7 @@ body {
         padding: 0;
         border-radius: 0;
     }
+
     .date-width {
         border-bottom: 1px solid #DEE2ED;
         width: 100%;

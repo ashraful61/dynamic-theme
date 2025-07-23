@@ -85,13 +85,15 @@ $(document).ready(function () {
             <td style='padding:16px 12px;'>${row.role}</td>
             <td style='padding:16px 12px;'><span style='display:flex;align-items:center;gap:4px;'><img src='img/add-data-list/CalendarBlank.png' /> ${row.start}</span></td>
             <td style='padding:16px 12px;'><span style='display:flex;align-items:center;gap:4px;'><img src='img/add-data-list/CalendarBlank.png' /> ${row.end}</span></td>
-            <td style='padding:16px 12px;'>${statusMap[row.status] || ''}</td>
-            <td style='padding:16px 12px;'>
-            <td style='padding:16px 12px;'>
-                <img src='img/add-data-list/rename.png' /> &nbsp;
+            <td style='padding:16px 12px; display:flex;justify-content:space-between'>
+            ${statusMap[row.status] || ''}
+            <span>
+              <img src='img/add-data-list/rename.png' /> &nbsp;
                 <img src='img/add-data-list/delete.png' /> 
+            </span>
             </td>
-            </td>
+     
+
         `;
             tbody.appendChild(tr);
         });

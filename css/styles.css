@@ -10,6 +10,7 @@ body {
     font-family: 'Inter', Arial, sans-serif;
     margin: 0 auto;
     font-size: 14px;
+    font-weight: 400;
 }
 
 main {
@@ -136,13 +137,22 @@ main {
     color: #818185;
     font-size: 14px;
     text-decoration: none;
+    color: #1C1C1C;
+    line-height: 160%;
+    letter-spacing: 0%;
+    opacity: 0.5;
 }
 
 .breadcrumb {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #64748b;
+}
+
+.breadcrumb .current {
+    color: #0A090A;
+    line-height: 160%;
+    letter-spacing: 0%;
     font-size: 14px;
 }
 
@@ -184,16 +194,37 @@ main {
     position: relative;
 }
 
-.sortable {
-    cursor: poi;
+.header_row th {
+    cursor: pointer;
     position: relative;
-    color: #334155;
+    color: #68696C;
     font-weight: 600;
     border-right: 1px solid #DEE2ED;
     transition: color 0.18s;
     background: #ffffff;
+    font-size: 12px;
+    line-height: 18%;
+    letter-spacing: 0%;
+    padding: 12px 16px;
 }
 
+.header_row {
+    border-bottom: 1px solid #DEE2ED;
+}
+
+.data-table th,
+.nested-table th,
+.nested-table td,
+.data-table td {
+    padding: 16px 12px;
+    text-align: left;
+}
+
+.data-table td,
+.nested-table td {
+    color: #0A090A;
+    font-size: 12px;
+}
 
 body[data-theme="dark"] .nav-links a {
     color: #fff;
@@ -284,6 +315,7 @@ body[data-theme="colored"] .nav-links a:hover {
 .logo-img-dark {
     display: none;
 }
+
 .relative {
     position: relative;
 }
@@ -297,6 +329,65 @@ body[data-theme="dark"] .logo-img-light,
 body[data-theme="colored"] .logo-img-light {
     display: none;
 }
+
+
+/* Modal Overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Box */
+.project-modal {
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    max-width: 640px;
+    width: 100%;
+    position: relative;
+}
+
+/* Table Styling */
+#nested-table-body tr:nth-child(even) {
+    background: #f9fbfd;
+}
+
+.status-completed {
+    color: #16a34a;
+    font-weight: 500;
+}
+
+.status-in-progress {
+    color: #2563eb;
+    font-weight: 500;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.status-dot.completed {
+    background: #16a34a;
+}
+
+.status-dot.in-progress {
+    background: #2563eb;
+}
+
+/* Date Range Styling */
+.date-range span img {
+    margin-right: 4px;
+}
+
 
 
 @media (max-width: 768px) {
