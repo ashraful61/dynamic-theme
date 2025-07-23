@@ -226,6 +226,10 @@ body {
     display: flex;
 }
 
+.secion-here-to {
+    display: none;
+}
+
 .project-modal {
     background: #fff;
     border-radius: 14px;

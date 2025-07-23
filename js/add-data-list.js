@@ -123,12 +123,12 @@ $(document).ready(function () {
         modalOverlay.style.display = 'none';
     };
     // Optional: prevent modal close on click inside
-    document.getElementById('project-modal').onclick = function (e) {
-        e.stopPropagation();
-    };
-    modalOverlay.onclick = function () {
-        modalOverlay.style.display = 'none';
-    };
+    // document.getElementById('project-modal').onclick = function (e) {
+    //     e.stopPropagation();
+    // };
+    // modalOverlay.onclick = function () {
+    //     modalOverlay.style.display = 'none';
+    // };
 
     // Skills tag toggle logic
     $(document).on('click', '.skill-tag', function () {
@@ -219,5 +219,38 @@ $(document).ready(function () {
         e.stopPropagation();
         $('.to-date').hide();
     });
+
+
+    $(document).on('click', '.toggle-calendar-icon-modalToDate', function (e) {
+        e.stopPropagation();
+        const popup = $('#modalToDate');
+        const isVisible = popup.is(':visible');
+        $('.modal-to-date').hide(); // Hide other calendar popups
+        if (!isVisible) {
+            popup.show();
+        }
+    });
+    
+    $(document).on('click', '#modalToDate', function (e) {
+        e.stopPropagation();
+    });
+    
+    $(document).on('click', '.cancel-btn-modalToDate', function (e) {
+        e.stopPropagation();
+        $('#modalToDate').hide();
+    });
+    
+    $(document).on('click', '.apply-btn-modalToDate', function (e) {
+        e.stopPropagation();
+        $('#modalToDate').hide();
+    });
+    
+
+
+
+ 
+    
+
+
 
 });
