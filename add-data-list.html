@@ -257,7 +257,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <input class="to-date" name="toDate" placeholder="To" /> -->
+
                                     <div class="relative date-width">
                                         <div class="toggle-calendar-icon-toDate">
                                             <span id="selectedValuetoDate"></span>
@@ -294,7 +294,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -345,13 +344,84 @@
                                     In progress</label>
                             </div>
                             <div class="modal-form-group">
-                                <label>Project Duration</label><br>
+                                <label>Project Duration</label><br/><br/>
 
-                                <div class="modal-date-range">
-                                    <input type="date" id="proj-start" class="modal-input-date"
-                                        placeholder="Started on">
-                                    <input type="date" id="proj-end" class="modal-input-date" placeholder="Ended on">
+                                <div class="date-range">
+                                    <div class="date-container">
+                                        <div class="relative date-width">
+                                            <div class="toggle-calendar-icon-modalFromDate">
+                                                <span id="selectedValuemodalFromDate"></span>
+                                                <img src="img/add-data-list/CalendarBlank.png" alt="">
+                                            </div>
+                                            <div class="modal-from-date" id="modalFromDate">
+                                                <div class="calendar-content">
+                                                    <div class="calendar-header">
+                                                        <button id="prevmodalFromDate">
+                                                            <img src="img/previous.png" alt="previous">
+                                                        </button>
+                                                        <h4 id="monthYearmodalFromDate">Apr 2025</h4>
+                                                        <button id="nextmodalFromDate">
+                                                            <img src="img/next.png" alt="next">
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendar-days">
+                                                        <div>S</div>
+                                                        <div>M</div>
+                                                        <div>T</div>
+                                                        <div>W</div>
+                                                        <div>T</div>
+                                                        <div>F</div>
+                                                        <div>S</div>
+                                                    </div>
+                                                    <div class="calendar-grid" id="calendarGridmodalFromDate">
+                                                        <!-- Days injected by JS -->
+                                                    </div>
+                                                    <div class="calendar-footer">
+                                                        <button class="cancel-btn-modalFromDate cancel-apply-btn">Cancel</button>
+                                                        <button class="apply-btn-modalFromDate cancel-apply-btn">Apply</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="relative date-width">
+                                            <div class="toggle-calendar-icon-modalToDate">
+                                                <span id="selectedValuemodalToDate"></span>
+                                                <img src="img/add-data-list/CalendarBlank.png" alt="">
+                                            </div>
+                                            <div class="modal-to-date" id="modalToDate">
+                                                <div class="calendar-content">
+                                                    <div class="calendar-header">
+                                                        <button id="prevmodalToDate">
+                                                            <img src="img/previous.png" alt="previous">
+                                                        </button>
+                                                        <h4 id="monthYearmodalToDate">Apr 2025</h4>
+                                                        <button id="nextmodalToDate">
+                                                            <img src="img/next.png" alt="next">
+                                                        </button>
+                                                    </div>
+                                                    <div class="calendar-days">
+                                                        <div>S</div>
+                                                        <div>M</div>
+                                                        <div>T</div>
+                                                        <div>W</div>
+                                                        <div>T</div>
+                                                        <div>F</div>
+                                                        <div>S</div>
+                                                    </div>
+                                                    <div class="calendar-grid" id="calendarGridmodalToDate">
+                                                        <!-- Days injected by JS -->
+                                                    </div>
+                                                    <div class="calendar-footer">
+                                                        <button class="cancel-btn-modalToDate cancel-apply-btn">Cancel</button>
+                                                        <button class="apply-btn-modalToDate cancel-apply-btn">Apply</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                
 
                             </div>
                             <div class="modal-actions">

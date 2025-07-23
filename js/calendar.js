@@ -110,5 +110,23 @@ $(document).ready(function () {
       nextBtnId: "nexttoDate",
       selectedValueId: "selectedValuetoDate",
     });
+
+    initCalendar({
+      monthYearId: "monthYearmodalFromDate",
+      calendarGridId: "calendarGridmodalFromDate",
+      prevBtnId: "prevmodalFromDate",
+      nextBtnId: "nextmodalFromDate",
+      selectedValueId: "selectedValuemodalFromDate",
+    });
+    
+
+    initCalendar({
+      monthYearId: "monthYearmodalToDate",
+      calendarGridId: "calendarGridmodalToDate",
+      prevBtnId: "prevmodalToDate",
+      nextBtnId: "nextmodalToDate",
+      selectedValueId: "selectedValuemodalToDate",
+    });
+
   });
   

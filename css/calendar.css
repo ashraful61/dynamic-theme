@@ -175,6 +175,26 @@
     opacity: 0.7;
     cursor: pointer;
   }
+
+  .toggle-calendar-icon-modalFromDate{
+    display: flex;
+    justify-content: space-between;
+    border-right: 1px solid #DEE2ED;
+    padding-right: 10px;
+    color:#0A090A;
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  
+  .toggle-calendar-icon-modalToDate{
+    display: flex;
+    justify-content: space-between;
+    border-right: 1px solid #DEE2ED;
+    padding-right: 10px;
+    color:#0A090A;
+    opacity: 0.7;
+    cursor: pointer;
+  }
   
   .toggle-calendar-icon-toDate{
     display: flex;
@@ -190,6 +210,16 @@
 @media (max-width: 600px) {
   
   .toggle-calendar-icon-fromDate{
+    padding-right: 0;
+    padding: 10px;
+    border-right: 0;
+  }
+  .toggle-calendar-icon-modalFromDate{
+    padding-right: 0;
+    padding: 10px;
+    border-right: 0;
+  }
+  .toggle-calendar-icon-modalToDate{
     padding-right: 0;
     padding: 10px;
     border-right: 0;

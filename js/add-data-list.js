@@ -123,12 +123,12 @@ $(document).ready(function () {
         modalOverlay.style.display = 'none';
     };
     // Optional: prevent modal close on click inside
-    document.getElementById('project-modal').onclick = function (e) {
-        e.stopPropagation();
-    };
-    modalOverlay.onclick = function () {
-        modalOverlay.style.display = 'none';
-    };
+    // document.getElementById('project-modal').onclick = function (e) {
+    //     e.stopPropagation();
+    // };
+    // modalOverlay.onclick = function () {
+    //     modalOverlay.style.display = 'none';
+    // };
 
     // Skills tag toggle logic
     $(document).on('click', '.skill-tag', function () {
@@ -218,6 +218,55 @@ $(document).ready(function () {
     $(document).on('click', '.apply-btn-toDate', function (e) {
         e.stopPropagation();
         $('.to-date').hide();
+    });
+
+
+    $(document).on('click', '.toggle-calendar-icon-modalFromDate', function (e) {
+        e.stopPropagation();
+        const popup = $(`#modalFromDate`);
+        const isVisible = popup.is(':visible');
+        // Hide all popups first
+        $('.modal-from-date').hide();
+        // Toggle this one
+        if (!isVisible) {
+            popup.show();
+        }
+    });
+
+    $(document).on('click', '.modal-from-date', function (e) {
+        e.stopPropagation();
+    });
+    $(document).on('click', '.cancel-btn-modalFromDate', function (e) {
+        e.stopPropagation();
+        $('.modl-from-date').hide();
+    });
+    $(document).on('click', '.apply-btn-modalFromDate', function (e) {
+        e.stopPropagation();
+        $('.modal-from-date').hide();
+    });
+
+    $(document).on('click', '.toggle-calendar-icon-modalToDate', function (e) {
+        e.stopPropagation();
+        const popup = $(`#modalToDate`);
+        const isVisible = popup.is(':visible');
+        // Hide all popups first
+        $('.modal-to-date').hide();
+        // Toggle this one
+        if (!isVisible) {
+            popup.show();
+        }
+    });
+
+    $(document).on('click', '.modal-to-date', function (e) {
+        e.stopPropagation();
+    });
+    $(document).on('click', '.cancel-btn-modalToDate', function (e) {
+        e.stopPropagation();
+        $('.modl-to-date').hide();
+    });
+    $(document).on('click', '.apply-btn-modalToDate', function (e) {
+        e.stopPropagation();
+        $('.modal-to-date').hide();
     });
 
 });

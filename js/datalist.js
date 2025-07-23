@@ -84,7 +84,7 @@ function renderTableRows() {
                     </span> 
                     ${row.statusText}
                 </span>
-                /td>
+                </td>
                 <td class="table-actions" style="position:relative;">
                     <img src="img/DownloadSimple.png" alt=""> &nbsp;
                     <img src="img/DotsThreeOutlineVertical2.png" alt="" class="dots-menu-btn" data-row="${idx}" style="cursor:pointer;">
