@@ -25,8 +25,6 @@ $(document).ready(function () {
     $(document).on('click', '.hamburger', function (e) {
         $('#navDrawer').toggleClass('open');
       });
-
-
 });
 
 

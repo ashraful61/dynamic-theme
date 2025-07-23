@@ -148,125 +148,94 @@ $(document).ready(function () {
         }
     });
 
-    $(document).on('click', '.toggle-calendar-icon', function (e) {
-        e.stopPropagation();
-        const popup = $(`#joinedDate`);
-        const isVisible = popup.is(':visible');
-        // Hide all popups first
-        $('.joined-date').hide();
-        // Toggle this one
-        if (!isVisible) {
-            popup.show();
-        }
-    });
 
-    $(document).on('click', '.joined-date', function (e) {
-        e.stopPropagation();
-    });
-    $(document).on('click', '.cancel-btnc', function (e) {
-        e.stopPropagation();
-        $('.joined-date').hide();
-    });
-    $(document).on('click', '.apply-btn', function (e) {
-        e.stopPropagation();
-        $('.joined-date').hide();
-    });
+    function initCalendarPopup({
+        toggleSelector,
+        popupSelector,
+        containerSelector,
+        applyBtnSelector,
+        cancelBtnSelector
+    }) {
+        // Toggle calendar
+        $(document).on('click', toggleSelector, function (e) {
+            e.stopPropagation();
+            const popup = $(popupSelector);
+            const isVisible = popup.is(':visible');
 
+            // Hide all other calendars of the same type
+            $(containerSelector).hide();
 
-    $(document).on('click', '.toggle-calendar-icon-fromDate', function (e) {
-        e.stopPropagation();
-        const popup = $(`#fromDate`);
-        const isVisible = popup.is(':visible');
-        // Hide all popups first
-        $('.from-date').hide();
-        // Toggle this one
-        if (!isVisible) {
-            popup.show();
-        }
-    });
+            // Show only this one if not visible
+            if (!isVisible) {
+                popup.show();
+            }
+        });
 
-    $(document).on('click', '.from-date', function (e) {
-        e.stopPropagation();
-    });
-    $(document).on('click', '.cancel-btn-fromDate', function (e) {
-        e.stopPropagation();
-        $('.from-date').hide();
-    });
-    $(document).on('click', '.apply-btn-fromDate', function (e) {
-        e.stopPropagation();
-        $('.from-date').hide();
-    });
+        // Prevent calendar from closing when clicking inside
+        $(document).on('click', popupSelector, function (e) {
+            e.stopPropagation();
+        });
 
-    $(document).on('click', '.toggle-calendar-icon-toDate', function (e) {
-        e.stopPropagation();
-        const popup = $(`#toDate`);
-        const isVisible = popup.is(':visible');
-        // Hide all popups first
-        $('.to-date').hide();
-        // Toggle this one
-        if (!isVisible) {
-            popup.show();
-        }
-    });
-    $(document).on('click', '.to-date', function (e) {
-        e.stopPropagation();
-    });
-    $(document).on('click', '.cancel-btn-toDate', function (e) {
-        e.stopPropagation();
-        $('.to-date').hide();
-    });
-    $(document).on('click', '.apply-btn-toDate', function (e) {
-        e.stopPropagation();
-        $('.to-date').hide();
-    });
+        // Apply button hides calendar
+        $(document).on('click', applyBtnSelector, function (e) {
+            e.stopPropagation();
+            $(containerSelector).hide();
+        });
+
+        // Cancel button hides calendar
+        $(document).on('click', cancelBtnSelector, function (e) {
+            e.stopPropagation();
+            $(containerSelector).hide();
+        });
+    }
 
 
-    $(document).on('click', '.toggle-calendar-icon-modalFromDate', function (e) {
-        e.stopPropagation();
-        const popup = $(`#modalFromDate`);
-        const isVisible = popup.is(':visible');
-        // Hide all popups first
-        $('.modal-from-date').hide();
-        // Toggle this one
-        if (!isVisible) {
-            popup.show();
-        }
+
+
+    initCalendarPopup({
+        toggleSelector: '.toggle-calendar-icon',
+        popupSelector: '#joinedDate',
+        containerSelector: '.joined-date',
+        applyBtnSelector: '.apply-btn',
+        cancelBtnSelector: '.cancel-btnc'
     });
 
-    $(document).on('click', '.modal-from-date', function (e) {
-        e.stopPropagation();
-    });
-    $(document).on('click', '.cancel-btn-modalFromDate', function (e) {
-        e.stopPropagation();
-        $('.modl-from-date').hide();
-    });
-    $(document).on('click', '.apply-btn-modalFromDate', function (e) {
-        e.stopPropagation();
-        $('.modal-from-date').hide();
+    initCalendarPopup({
+        toggleSelector: '.toggle-calendar-icon-fromDate',
+        popupSelector: '#fromDate',
+        containerSelector: '.from-date',
+        applyBtnSelector: '.apply-btn-fromDate',
+        cancelBtnSelector: '.cancel-btn-fromDate'
     });
 
-    $(document).on('click', '.toggle-calendar-icon-modalToDate', function (e) {
-        e.stopPropagation();
-        const popup = $(`#modalToDate`);
-        const isVisible = popup.is(':visible');
-        // Hide all popups first
-        $('.modal-to-date').hide();
-        // Toggle this one
-        if (!isVisible) {
-            popup.show();
-        }
+    initCalendarPopup({
+        toggleSelector: '.toggle-calendar-icon-toDate',
+        popupSelector: '#toDate',
+        containerSelector: '.to-date',
+        applyBtnSelector: '.apply-btn-toDate',
+        cancelBtnSelector: '.cancel-btn-toDate'
     });
 
-    $(document).on('click', '.modal-to-date', function (e) {
-        e.stopPropagation();
+    initCalendarPopup({
+        toggleSelector: '.toggle-calendar-icon-modalFromDate',
+        popupSelector: '#modalFromDate',
+        containerSelector: '.modal-from-date',
+        applyBtnSelector: '.apply-btn-modalFromDate',
+        cancelBtnSelector: '.cancel-btn-modalFromDate'
     });
-    $(document).on('click', '.cancel-btn-modalToDate', function (e) {
-        e.stopPropagation();
-        $('.modl-to-date').hide();
+
+    initCalendarPopup({
+        toggleSelector: '.toggle-calendar-icon-modalToDate',
+        popupSelector: '#modalToDate',
+        containerSelector: '.modal-to-date',
+        applyBtnSelector: '.apply-btn-modalToDate',
+        cancelBtnSelector: '.cancel-btn-modalToDate'
     });
-    $(document).on('click', '.apply-btn-modalToDate', function (e) {
-        e.stopPropagation();
-        $('.modal-to-date').hide();
+
+    $(document).on('click', function () {
+        $('.joined-date, .from-date, .to-date, .modal-from-date, .modal-to-date').hide();
     });
+
+
 
 });

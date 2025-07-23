@@ -234,6 +234,7 @@ body {
     max-width: 650px;
     width: 100%;
     position: relative;
+    overflow-y: auto;
 }
 
 .cancel-icon-modal {
